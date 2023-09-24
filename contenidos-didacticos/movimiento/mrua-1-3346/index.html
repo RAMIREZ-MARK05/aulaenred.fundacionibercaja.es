@@ -1,0 +1,1130 @@
+<!DOCTYPE html>
+<!--[if IE 7]>
+<html class="ie ie7" lang="es">
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8" lang="es">
+<![endif]-->
+<!--[if !(IE 7) | !(IE 8)  ]><!-->
+<html lang="es">
+<!--<![endif]-->
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="profile" href="https://gmpg.org/xfn/11" />
+<link rel="icon" href="https://aulaenred.fundacionibercaja.es/wp-content/themes/aula-en-red/favicon.ico" type="image/x-icon" />
+<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+
+	<!-- This site is optimized with the Yoast SEO plugin v19.10 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>MRUA 1 - Movimiento - Ibercaja Aula en Red</title>
+	<meta name="description" content="Problemas y simulaciones para entender la posición, velocidad y aceleración en el movimiento rectilíneo uniforme y en el rectilíneo uniformemente acelerado." />
+	<meta property="og:locale" content="es_ES" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Movimiento - Ibercaja Aula en Red" />
+	<meta property="og:description" content="Problemas y simulaciones para entender la posición, velocidad y aceleración en el movimiento rectilíneo uniforme y en el rectilíneo uniformemente acelerado." />
+	<meta property="og:url" content="https://aulaenred.ibercaja.es/contenidos-didacticos/movimiento/" />
+	<meta property="og:site_name" content="Ibercaja Aula en Red" />
+	<meta property="article:modified_time" content="2019-03-14T08:48:44+00:00" />
+	<meta property="og:image" content="https://aulaenred.ibercaja.es/wp-content/uploads/movimiento2015.gif" />
+	<meta property="og:image:width" content="595" />
+	<meta property="og:image:height" content="346" />
+	<meta property="og:image:type" content="image/gif" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://aulaenred.ibercaja.es/contenidos-didacticos/movimiento/","url":"https://aulaenred.ibercaja.es/contenidos-didacticos/movimiento/","name":"Movimiento - Ibercaja Aula en Red","isPartOf":{"@id":"https://aulaenred.ibercaja.es/#website"},"primaryImageOfPage":{"@id":"https://aulaenred.ibercaja.es/contenidos-didacticos/movimiento/#primaryimage"},"image":{"@id":"https://aulaenred.ibercaja.es/contenidos-didacticos/movimiento/#primaryimage"},"thumbnailUrl":"https://aulaenred.fundacionibercaja.es/wp-content/uploads/movimiento2015.gif","datePublished":"2015-09-15T07:00:21+00:00","dateModified":"2019-03-14T08:48:44+00:00","description":"Problemas y simulaciones para entender la posición, velocidad y aceleración en el movimiento rectilíneo uniforme y en el rectilíneo uniformemente acelerado.","breadcrumb":{"@id":"https://aulaenred.ibercaja.es/contenidos-didacticos/movimiento/#breadcrumb"},"inLanguage":"es","potentialAction":[{"@type":"ReadAction","target":["https://aulaenred.ibercaja.es/contenidos-didacticos/movimiento/"]}]},{"@type":"ImageObject","inLanguage":"es","@id":"https://aulaenred.ibercaja.es/contenidos-didacticos/movimiento/#primaryimage","url":"https://aulaenred.fundacionibercaja.es/wp-content/uploads/movimiento2015.gif","contentUrl":"https://aulaenred.fundacionibercaja.es/wp-content/uploads/movimiento2015.gif","width":595,"height":346},{"@type":"BreadcrumbList","@id":"https://aulaenred.ibercaja.es/contenidos-didacticos/movimiento/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Portada","item":"https://aulaenred.ibercaja.es/"},{"@type":"ListItem","position":2,"name":"Movimiento"}]},{"@type":"WebSite","@id":"https://aulaenred.ibercaja.es/#website","url":"https://aulaenred.ibercaja.es/","name":"Ibercaja Aula en Red","description":"Iniciativa educa","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://aulaenred.ibercaja.es/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"es"}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel="alternate" type="application/rss+xml" title="Ibercaja Aula en Red &raquo; Feed" href="https://aulaenred.fundacionibercaja.es/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Ibercaja Aula en Red &raquo; Feed de los comentarios" href="https://aulaenred.fundacionibercaja.es/comments/feed/" />
+<link rel='stylesheet' id='wp-block-library-css' href='https://aulaenred.fundacionibercaja.es/wp-includes/css/dist/block-library/style.min.css?ver=cbd17de6928560d53e03e9454fc94700' type='text/css' media='all' />
+<link rel='stylesheet' id='classic-theme-styles-css' href='https://aulaenred.fundacionibercaja.es/wp-includes/css/classic-themes.min.css?ver=1' type='text/css' media='all' />
+<style id='global-styles-inline-css' type='text/css'>
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;}:where(.is-layout-flex){gap: 0.5em;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel='stylesheet' id='contact-form-7-css' href='https://aulaenred.fundacionibercaja.es/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=5.6.4' type='text/css' media='all' />
+<link rel='stylesheet' id='cookie-law-info-css' href='https://aulaenred.fundacionibercaja.es/wp-content/plugins/cookie-law-info/legacy/public/css/cookie-law-info-public.css?ver=3.0.5' type='text/css' media='all' />
+<link rel='stylesheet' id='cookie-law-info-gdpr-css' href='https://aulaenred.fundacionibercaja.es/wp-content/plugins/cookie-law-info/legacy/public/css/cookie-law-info-gdpr.css?ver=3.0.5' type='text/css' media='all' />
+<link rel='stylesheet' id='default-template-css' href='https://aulaenred.fundacionibercaja.es/wp-content/plugins/register-plus-redux/extension/readygraph/assets/css/default-popup.css?ver=cbd17de6928560d53e03e9454fc94700' type='text/css' media='all' />
+<link rel='stylesheet' id='aulaenred-style-css' href='https://aulaenred.fundacionibercaja.es/wp-content/themes/aula-en-red/style.css?ver=cbd17de6928560d53e03e9454fc94700' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-css' href='https://aulaenred.fundacionibercaja.es/wp-content/themes/aula-en-red/css/font-awesome.css?ver=cbd17de6928560d53e03e9454fc94700' type='text/css' media='all' />
+<!--[if IE 8]>
+<link rel='stylesheet' id='aulaenred-ie8-css' href='https://aulaenred.fundacionibercaja.es/wp-content/themes/aula-en-red/css/ie8.css?ver=20121010' type='text/css' media='all' />
+<![endif]-->
+<!--[if lt IE 8]>
+<link rel='stylesheet' id='aulaenred-ie7-css' href='https://aulaenred.fundacionibercaja.es/wp-content/themes/aula-en-red/css/ie7.css?ver=20121010' type='text/css' media='all' />
+<![endif]-->
+<script type='text/javascript' src='https://aulaenred.fundacionibercaja.es/wp-includes/js/jquery/jquery.min.js?ver=3.6.1' id='jquery-core-js'></script>
+<script type='text/javascript' src='https://aulaenred.fundacionibercaja.es/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2' id='jquery-migrate-js'></script>
+<script type='text/javascript' id='cookie-law-info-js-extra'>
+/* <![CDATA[ */
+var Cli_Data = {"nn_cookie_ids":[],"cookielist":[],"non_necessary_cookies":[],"ccpaEnabled":"","ccpaRegionBased":"","ccpaBarEnabled":"","strictlyEnabled":["necessary","obligatoire"],"ccpaType":"gdpr","js_blocking":"","custom_integration":"","triggerDomRefresh":"","secure_cookies":""};
+var cli_cookiebar_settings = {"animate_speed_hide":"500","animate_speed_show":"500","background":"#000000","border":"#444","border_on":"","button_1_button_colour":"#000","button_1_button_hover":"#000000","button_1_link_colour":"#fff","button_1_as_button":"1","button_1_new_win":"","button_2_button_colour":"#333","button_2_button_hover":"#292929","button_2_link_colour":"#ffffff","button_2_as_button":"","button_2_hidebar":"","button_3_button_colour":"#000","button_3_button_hover":"#000000","button_3_link_colour":"#fff","button_3_as_button":"1","button_3_new_win":"","button_4_button_colour":"#000","button_4_button_hover":"#000000","button_4_link_colour":"#fff","button_4_as_button":"1","button_7_button_colour":"#61a229","button_7_button_hover":"#4e8221","button_7_link_colour":"#fff","button_7_as_button":"1","button_7_new_win":"","font_family":"inherit","header_fix":"","notify_animate_hide":"1","notify_animate_show":"","notify_div_id":"#cookie-law-info-bar","notify_position_horizontal":"right","notify_position_vertical":"bottom","scroll_close":"","scroll_close_reload":"","accept_close_reload":"","reject_close_reload":"","showagain_tab":"","showagain_background":"#fff","showagain_border":"#000","showagain_div_id":"#cookie-law-info-again","showagain_x_position":"100px","text":"#ffffff","show_once_yn":"","show_once":"10000","logging_on":"","as_popup":"","popup_overlay":"1","bar_heading_text":"","cookie_bar_as":"banner","popup_showagain_position":"bottom-right","widget_position":"left"};
+var log_object = {"ajax_url":"https:\/\/aulaenred.fundacionibercaja.es\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://aulaenred.fundacionibercaja.es/wp-content/plugins/cookie-law-info/legacy/public/js/cookie-law-info-public.js?ver=3.0.5' id='cookie-law-info-js'></script>
+<link rel="https://api.w.org/" href="https://aulaenred.fundacionibercaja.es/wp-json/" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://aulaenred.fundacionibercaja.es/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://aulaenred.fundacionibercaja.es/wp-includes/wlwmanifest.xml" />
+
+<link rel='shortlink' href='https://aulaenred.fundacionibercaja.es/?p=3338' />
+<link rel="alternate" type="application/json+oembed" href="https://aulaenred.fundacionibercaja.es/wp-json/oembed/1.0/embed?url=https%3A%2F%2Faulaenred.fundacionibercaja.es%2Fcontenidos-didacticos%2Fmovimiento%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://aulaenred.fundacionibercaja.es/wp-json/oembed/1.0/embed?url=https%3A%2F%2Faulaenred.fundacionibercaja.es%2Fcontenidos-didacticos%2Fmovimiento%2F&#038;format=xml" />
+<style type="text/css" id="custom-background-css">
+body.custom-background { background-image: url("https://aulaenred.fundacionibercaja.es/wp-content/themes/aula-en-red/images/ibercaja-aulaenred-fondo.png"); background-position: left top; background-size: auto; background-repeat: repeat; background-attachment: scroll; }
+</style>
+	<link rel="stylesheet" type="text/css" media="all" href="https://aulaenred.fundacionibercaja.es/wp-content/themes/aula-en-red/css/2017.css" />
+<link rel="stylesheet" href="https://aulaenred.fundacionibercaja.es/wp-content/themes/aula-en-red/css/2017.css">
+<!--[if ie 9]>
+    <link rel="stylesheet" href="https://aulaenred.fundacionibercaja.es/wp-content/themes/aula-en-red/css/2017-ie.css">
+<![endif]-->
+
+<script src="https://aulaenred.fundacionibercaja.es/wp-content/themes/aula-en-red/js/scripts.js" type="text/javascript"></script>
+<script src="https://aulaenred.fundacionibercaja.es/wp-content/themes/aula-en-red/js/2017.js" type="text/javascript"></script>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+
+<!--[if lt IE 9]>
+<script src="https://aulaenred.fundacionibercaja.es/wp-content/themes/aula-en-red/js/html5.js" type="text/javascript"></script>
+<![endif]-->
+
+
+<!-- for Twitter -->
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Ibercaja Aula en Red" />
+<meta name="twitter:image" content="http://aulaenred.ibercaja.es/wp-content/uploads/aula-en-red-logo.png" />
+
+</head>
+
+<body data-rsssl=1 class="c-actividad--media">
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-29081556-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MGHVEQX5ZP"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-MGHVEQX5ZP');
+</script><div class="container">
+    <div class="header">
+    	
+        <div class="logo">
+            <div class="grupologo">
+                <a href="https://www.fundacionibercaja.es/" alt="Fundación Ibercaja" target="_blank"><img src="https://aulaenred.fundacionibercaja.es/wp-content/themes/aula-en-red/images/ibercaja.png" alt="Ibercaja Obra Social" width="119" height="31" id="ibercaja" class="fltrt clearfloat" /></a>
+                <div id="aulaenred">
+					<a href="https://aulaenred.fundacionibercaja.es" alt="Ibercaja Aula en Red">
+						<h3>Ibercaja Aula <br />en red</h3>
+					</a>
+				</div>
+            </div>
+        </div>
+
+
+
+
+
+		
+         <div class="c-header__ham">
+        	<button for="" class="c-menu__ham"><img src="https://aulaenred.fundacionibercaja.es/wp-content/themes/aula-en-red/images2017/hamburguesa@2x.svg" alt="Menú"></button>
+        </div>
+        <div class="nota">
+            <div class="gruponota">
+            	<form role="search" method="get" class="search-form" action="https://aulaenred.fundacionibercaja.es/">
+            	<input class="c-header__search  c-input-search" name="s" type="text" placeholder="Buscar"
+					value=""/>
+            	</form>
+            </div>
+        </div>
+
+        
+
+
+
+
+    </div>
+	<!-- end .header -->
+	<div class="menuprincipal   c-menu">
+        <!--div class="grupomenuprincipal"-->
+			<nav id="site-navigation" class="grupomenuprincipal" role="navigation" >
+
+
+
+
+
+				
+				<div class="c-menu__close  u-hide-desktop">
+					<button><img src="https://aulaenred.fundacionibercaja.es/wp-content/themes/aula-en-red/images2017/flecha.svg" alt="Volver"></button>
+				</div>
+
+       	 		
+
+
+
+
+
+					<div class="menu-menu-principal-container"><ul id="menu-menu-principal" class="fltrt"><li id="menu-item-38" class="menu-item menu-item-type-post_type menu-item-object-otrocontenido menu-item-38"><a href="https://aulaenred.fundacionibercaja.es/apartado/contenidos-didacticos/">Contenidos Didácticos</a>
+<ul class="sub-menu">
+	<li id="menu-item-5646" class="menu-item menu-item-type-taxonomy menu-item-object-materias menu-item-5646"><a href="https://aulaenred.fundacionibercaja.es/materias/artes/">Artes</a></li>
+	<li id="menu-item-45" class="menu-item menu-item-type-taxonomy menu-item-object-materias current-contenidosdidacticos-ancestor current-menu-parent current-contenidosdidacticos-parent menu-item-45"><a href="https://aulaenred.fundacionibercaja.es/materias/ciencias/">Ciencias</a></li>
+	<li id="menu-item-47" class="menu-item menu-item-type-taxonomy menu-item-object-materias menu-item-47"><a href="https://aulaenred.fundacionibercaja.es/materias/humanidades/">Humanidades y Ciencias Sociales</a></li>
+	<li id="menu-item-10706" class="menu-item menu-item-type-taxonomy menu-item-object-materias menu-item-10706"><a href="https://aulaenred.fundacionibercaja.es/materias/movilidad/">Movilidad</a></li>
+	<li id="menu-item-48" class="menu-item menu-item-type-taxonomy menu-item-object-materias menu-item-48"><a href="https://aulaenred.fundacionibercaja.es/materias/tecnologia-secundaria/">Tecnología</a></li>
+	<li id="menu-item-4894" class="menu-item menu-item-type-taxonomy menu-item-object-materias menu-item-4894"><a href="https://aulaenred.fundacionibercaja.es/materias/educacion/">Educación</a></li>
+</ul>
+</li>
+<li id="menu-item-41" class="menu-item menu-item-type-post_type menu-item-object-otrocontenido menu-item-41"><a href="https://aulaenred.fundacionibercaja.es/apartado/niveles-educativos/">Niveles Educativos</a>
+<ul class="sub-menu">
+	<li id="menu-item-51" class="menu-item menu-item-type-taxonomy menu-item-object-niveles menu-item-51"><a href="https://aulaenred.fundacionibercaja.es/niveles/primaria/">Primaria</a></li>
+	<li id="menu-item-52" class="menu-item menu-item-type-taxonomy menu-item-object-niveles current-contenidosdidacticos-ancestor menu-item-52"><a href="https://aulaenred.fundacionibercaja.es/niveles/secundaria/">Secundaria</a></li>
+	<li id="menu-item-49" class="menu-item menu-item-type-taxonomy menu-item-object-niveles menu-item-49"><a href="https://aulaenred.fundacionibercaja.es/niveles/bachillerato/">Bachillerato</a></li>
+	<li id="menu-item-50" class="menu-item menu-item-type-taxonomy menu-item-object-niveles menu-item-50"><a href="https://aulaenred.fundacionibercaja.es/niveles/ciclos-formativos/">Ciclos formativos</a></li>
+	<li id="menu-item-4895" class="menu-item menu-item-type-taxonomy menu-item-object-niveles menu-item-4895"><a href="https://aulaenred.fundacionibercaja.es/niveles/educadores/">Educadores</a></li>
+</ul>
+</li>
+<li id="menu-item-40" class="menu-item menu-item-type-post_type menu-item-object-otrocontenido menu-item-40"><a href="https://aulaenred.fundacionibercaja.es/apartado/actividades-para-profesores/">Actividades profesores</a>
+<ul class="sub-menu">
+	<li id="menu-item-11930" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11930"><a href="https://www.fundacionibercaja.es/actividades/ciclos-y-programas/ciclo-desafios-docentes/">Desafíos docentes</a></li>
+	<li id="menu-item-10219" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-10219"><a href="https://www.fundacionibercaja.es/que-hacemos/mas-desarrollo-profesional/educar-para-el-futuro-2023/">Programa Educar para el Futuro</a></li>
+	<li id="menu-item-60" class="vertodo menu-item menu-item-type-post_type menu-item-object-otrocontenido menu-item-60"><a href="https://aulaenred.fundacionibercaja.es/apartado/actividades-para-profesores/">Ver todas las actividades></a></li>
+</ul>
+</li>
+<li id="menu-item-39" class="menu-item menu-item-type-post_type menu-item-object-otrocontenido menu-item-39"><a href="https://aulaenred.fundacionibercaja.es/apartado/actividades-para-estudiantes/">Actividades estudiantes</a>
+<ul class="sub-menu">
+	<li id="menu-item-11221" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11221"><a href="https://www.fundacionibercaja.es/actividades/ciclos-y-programas/programa-incorpora-tech-zaragoza/">Programa Incorpora-Tech</a></li>
+	<li id="menu-item-11222" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11222"><a href="https://www.fundacionibercaja.es/programas-didacticos">Programas Didácticos Ibercaja</a></li>
+	<li id="menu-item-11923" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11923"><a href="https://www.fundacionibercaja.es/actividades/ciclos-y-programas/educacion-financiera-ibercaja-para-escolares/">Educación financiera Ibercaja para escolares</a></li>
+	<li id="menu-item-11924" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11924"><a href="https://www.fundacionibercaja.es/actividades/ciclos-y-programas/programa-de-la-cabeza-a-los-pies-zaragoza/">De la cabeza a los pies</a></li>
+	<li id="menu-item-11925" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11925"><a href="https://www.fundacionibercaja.es/programas-didacticos/escuelas-2030-rescatadores-del-planeta-zaragoza/">Escuelas 2030: rescatadores del planeta</a></li>
+	<li id="menu-item-11926" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11926"><a href="https://www.fundacionibercaja.es/programas-didacticos/soy-futuro/">Soy futuro</a></li>
+	<li id="menu-item-11927" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11927"><a href="https://www.fundacionibercaja.es/aprendiendo-a-emprender">Aprendiendo a emprender con Ibercaja</a></li>
+	<li id="menu-item-11928" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11928"><a href="https://orienta.ibercaja.es/">Ibercaja Orienta</a></li>
+	<li id="menu-item-11929" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11929"><a href="https://www.fundacionibercaja.es/actividades/concursos-y-certamenes/visionarios-tic-v-edicion/">Concurso Visionarios TIC</a></li>
+	<li id="menu-item-3540" class="menu-item menu-item-type-post_type menu-item-object-otrocontenido menu-item-3540"><a href="https://aulaenred.fundacionibercaja.es/apartado/actividades-para-estudiantes/">Ver todas las actividades ></a></li>
+</ul>
+</li>
+<li id="menu-item-37" class="menu-item menu-item-type-post_type menu-item-object-otrocontenido menu-item-37"><a href="https://aulaenred.fundacionibercaja.es/apartado/concursos-para-estudiantes/">Concursos estudiantes</a>
+<ul class="sub-menu">
+	<li id="menu-item-11920" class="menu-item menu-item-type-post_type menu-item-object-concursosestudiantes menu-item-11920"><a href="https://aulaenred.fundacionibercaja.es/concursos-para-estudiantes/concurso-reporteros-en-la-red-2024/">Concurso Reporteros en la Red 2024</a></li>
+	<li id="menu-item-11943" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11943"><a href="https://www.fundacionibercaja.es/actividades/concursos-y-certamenes/visionarios-tic-v-edicion/">Concurso Visionarios TIC</a></li>
+	<li id="menu-item-11427" class="menu-item menu-item-type-post_type menu-item-object-concursosestudiantes menu-item-11427"><a href="https://aulaenred.fundacionibercaja.es/concursos-para-estudiantes/concurso-reporteros-en-la-red-2023-trabajos-ganadores/">Concurso Reporteros en la Red 2023. Trabajos ganadores</a></li>
+	<li id="menu-item-11125" class="menu-item menu-item-type-post_type menu-item-object-concursosestudiantes menu-item-11125"><a href="https://aulaenred.fundacionibercaja.es/concursos-para-estudiantes/concurso-reporteros-en-la-red-2022-trabajos-ganadores/">Concurso Reporteros en la Red 2022. Trabajos ganadores</a></li>
+	<li id="menu-item-10903" class="menu-item menu-item-type-post_type menu-item-object-concursosestudiantes menu-item-10903"><a href="https://aulaenred.fundacionibercaja.es/concursos-para-estudiantes/concurso-reporteros-en-la-red-2020-2021-trabajos-ganadores/">Concurso Reporteros en la red 2020-2021. Trabajos ganadores</a></li>
+</ul>
+</li>
+</ul></div>
+
+
+
+
+				
+				<div class="c-menu__search  u-hide-desktop">
+
+					<form role="search" method="get" class="search-form" action="https://aulaenred.fundacionibercaja.es/">
+        <input type="search"
+		name="s"
+		placeholder="Introduce tu búsqueda"
+		value=""/>
+</form>
+
+
+				</div>
+
+       	 		
+
+
+
+
+
+
+			</nav><!-- #site-navigation -->		
+		<!--/div-->
+	</div>
+
+<div class="content ">
+  <div class="cuerpo">
+			
+
+<div class="filacuerpo">
+				
+	<h1 class="textoazul fltlft">
+		Movimiento	</h1>
+
+	<div class="fltrt  u-only-desktop">
+		<a href="https://aulaenred.fundacionibercaja.es/apartado/contenidos-didacticos/" class="enlacegris">
+			<i class="fa fa-chevron-left"></i> volver a la pantalla anterior
+		</a>
+	</div>
+
+	<div class="clearfloat"></div>
+
+</div>
+
+
+
+
+<style type="text/css">
+#ventana_completa {
+	top: 0;
+	left: 0;
+	background: #fff;
+	width: 100%;
+	height: 100%;
+	display: none;
+	z-index: 9999;
+	overflow: hidden;
+}
+#ventana_completa .c-actividad__media__content__iframe-wrap {
+	position: relative;
+	margin: auto auto;
+}
+a.pantalla-completa:hover {
+	cursor: pointer;
+}
+</style>
+<div id="ventana_completa"></div>
+
+<div class="filacuerpo">
+
+
+
+<div id="ficha"  class="c-actividad__menu-media">
+
+<div class="fltlft c-actividad__menu">
+	<h2 class="c-actividad__menu__title  u-only-mobile">Selecciona un tema:</h2>
+
+	<input type="hidden" id="ejercicioanterior" name="ejercicioanterior" value="">
+
+	<ul class="c-actividad__menu__temas">
+		<li class="apartado">
+			<h1 class="c-h2--cintillo--1col">Movimiento Rectilíneo Uniforme</h1>
+			<ul class="c-list--links">
+				<li class="titulo">
+
+
+				<a 
+				id="ejercicio_Movimiento_Rectilíneo_Uniforme_MRU 1" 
+				href="https://aulaenred.fundacionibercaja.es/contenidos-didacticos/movimiento/mru-1-3340/"
+								class="url_titulo" 
+				>
+				MRU 1				</a>
+		
+
+						
+
+		</li>
+		<script>console.debug('Attach');</script>		<li class="titulo">
+
+
+				<a 
+				id="ejercicio_Movimiento_Rectilíneo_Uniforme_MRU 2" 
+				href="https://aulaenred.fundacionibercaja.es/contenidos-didacticos/movimiento/mru-2-3341/"
+								class="url_titulo" 
+				>
+				MRU 2				</a>
+		
+
+						
+
+		</li>
+		<script>console.debug('Attach');</script>		<li class="titulo">
+
+
+				<a 
+				id="ejercicio_Movimiento_Rectilíneo_Uniforme_MRU 3" 
+				href="https://aulaenred.fundacionibercaja.es/contenidos-didacticos/movimiento/mru-3-3342/"
+								class="url_titulo" 
+				>
+				MRU 3				</a>
+		
+
+						
+
+		</li>
+		<script>console.debug('Attach');</script>		<li class="titulo">
+
+
+				<a 
+				id="ejercicio_Movimiento_Rectilíneo_Uniforme_MRU 4" 
+				href="https://aulaenred.fundacionibercaja.es/contenidos-didacticos/movimiento/mru-4-3343/"
+								class="url_titulo" 
+				>
+				MRU 4				</a>
+		
+
+						
+
+		</li>
+		<script>console.debug('Attach');</script>		<li class="titulo">
+
+
+				<a 
+				id="ejercicio_Movimiento_Rectilíneo_Uniforme_MRU 5" 
+				href="https://aulaenred.fundacionibercaja.es/contenidos-didacticos/movimiento/mru-5-3344/"
+								class="url_titulo" 
+				>
+				MRU 5				</a>
+		
+
+						
+
+		</li>
+		<script>console.debug('Attach');</script>		<li class="titulo">
+
+
+				<a 
+				id="ejercicio_Movimiento_Rectilíneo_Uniforme_MRU 6" 
+				href="https://aulaenred.fundacionibercaja.es/contenidos-didacticos/movimiento/mru-6-3345/"
+								class="url_titulo" 
+				>
+				MRU 6				</a>
+		
+
+						
+
+		</li>
+		<script>console.debug('Attach');</script></ul></li>
+		<li class="apartado">
+			<h1 class="c-h2--cintillo--1col">Movimiento Rectilíneo Acelerado</h1>
+			<ul class="c-list--links">
+				<li class="titulo">
+
+
+				<a 
+				id="ejercicio_Movimiento_Rectilíneo_Acelerado_MRUA 1" 
+				href="https://aulaenred.fundacionibercaja.es/contenidos-didacticos/movimiento/mrua-1-3346/"
+								class="url_titulo" 
+				>
+				MRUA 1				</a>
+		
+
+			
+			<script type="text/javascript">
+
+				//Fejercicio
+				function fejercicio_3346() {
+					//jQuery('.c-actividad__media__iframe__descripcion').hide();
+					//fcambiar('Movimiento_Rectilíneo_Acelerado','MRUA 1');
+										fcargarHTML5('https://aulaenred.fundacionibercaja.es/wp-content/uploads/movimiento2_01.html', 'https://aulaenred.fundacionibercaja.es', 3346);
+									}
+				jQuery(document).ready(function( $ ) {
+					console.debug("llega");
+					fejercicio_3346();
+					console.debug("pasa");
+				});
+
+
+				function fsadf(a, b, c)
+				{
+					var dir = "https://aulaenred.fundacionibercaja.es";
+					var n = jQuery("#numero").html();	
+					jQuery.ajax({
+					type: "post",
+					 url: dir + '/curso.php',
+					 data: { vva: a, vvb: b, vvc: c, vvd: n },
+					 success: function()
+					 {
+						jQuery("#contenidounidadFlash").html("<blockquote>Selecciona en el men&uacute; de la izquierda el contenido para comenzar</blockquote>"); 
+						redimensionar();
+					  }
+					  });
+				}
+				 
+
+				//redimensionarfunction 
+				function redimensionar()
+				{
+				//iframe
+				if (document.getElementsByTagName("iframe")[0]!=null)
+				{
+					if ((document.getElementById("myMovieName").width==702)	|| (document.getElementById("myMovieName").width=="702px"))
+					{
+						if (document.getElementById("ventana")!=null)
+						{
+						document.getElementById("ventana").innerHTML="";
+						}
+
+						//Ventana ampliadad
+						window.scrollTo(0, 0);
+
+						//Si esta oculta nota
+						jQuery(".top").css("display", "none"); 
+						jQuery(".logo").css("display", "none"); 
+						jQuery(".logo").css("display", "none"); 
+						jQuery(".nota").css("display", "");
+						jQuery(".menuprincipal").css("display", "none");
+						jQuery(".nota_cerrado").css("display", "none");
+						jQuery("div.menuprincipal").removeClass("menuprincipal_cerrado");
+						jQuery("div.content").removeClass("content_cerrado"); 
+
+						//Ventana de aplicacion
+						if (document.getElementById("myMovieName")!=null)
+						{
+						document.getElementById("myMovieName").width = "100%";
+						document.getElementById("myMovieName").height = "100%";	
+						document.getElementById("myMovieName").style.position = "absolute";
+						document.getElementById("myMovieName").style.top = "30px";
+						document.getElementById("myMovieName").style.left = 0;		
+						document.getElementById("myMovieName").style.zIndex = 10;	
+						document.getElementById("myMovieName").style.backgroundColor = "white";	
+						}
+
+						//zoom
+						if (document.getElementsByTagName("iframe")[0]!=null)
+						{
+						var iframe = document.getElementsByTagName("iframe")[0]
+						var doc = iframe.contentWindow.document
+						}
+
+						var zoom = 0;
+						var altura = jQuery("iframe").contents().find("#tabs").outerHeight();
+						var anchura = jQuery("iframe").contents().find("#tabs").outerWidth();
+						var zoom1=jQuery("iframe").outerHeight() / jQuery("iframe").contents().find("#tabs").outerHeight();
+						var zoom2=jQuery("iframe").outerWidth() / jQuery("iframe").contents().find("#tabs").outerWidth();
+						if (zoom1 < zoom2)
+						{ zoom = zoom1;	}
+						else
+						{ zoom = zoom2;	}
+
+						if (doc.getElementById("tabs")!=null)
+						{
+						doc.getElementById("tabs").style.transform = "scale(" + zoom + "," + zoom + ")";
+						doc.getElementById("tabs").style.marginTop = ((jQuery("iframe").contents().find("#tabs").outerHeight() * zoom) - altura)/2 +"px";
+						doc.getElementById("tabs").style.marginLeft = ((jQuery("iframe").contents().find("#tabs").outerWidth() * zoom) - anchura)/2 +"px";
+						}
+
+						//Zona de botones
+						if (document.getElementById("screen")!=null)
+						{
+						document.getElementById("screen").style.top = 0;
+						document.getElementById("screen").style.left = 0;		
+						document.getElementById("screen").style.zIndex = 11;
+						document.getElementById("screen").style.position = "absolute";		
+						document.getElementById("screen").style.marginTop = document.getElementById("myMovieName").clientHeight;
+						document.getElementById("screen").style.backgroundColor = "rgb(231, 242, 251)";	 	
+						document.getElementById("screen").style.paddingRight = "10px";		
+						document.getElementById("screen").style.paddingLeft = "0px";
+						document.getElementById("screen").style.textAlign = "right";	
+						document.getElementById("screen").style.lineHeight = "30px";
+						}
+
+						//Enlace
+						if (document.getElementById("screen-link")!=null)
+						{
+						document.getElementById("screen-link").innerHTML= "<i class='fa fa-times-circle'></i> Salir de pantalla completa";
+						document.getElementById("screen-link").style.marginRight = "10px";
+						}
+
+						//Scroll
+						document.body.style.overflow = "hidden";	
+					}
+					else
+					{
+						//Ventana normal 
+						if (document.getElementById("ventana")!=null)
+						{
+						document.getElementById("ventana").innerHTML="";
+						}
+
+						//Ventana de aplicacion
+						if (document.getElementById("myMovieName")!=null)
+						{
+						document.getElementById("myMovieName").width = "702px";
+						document.getElementById("myMovieName").height = "402px";
+						document.getElementById("myMovieName").style.position = "static";		
+						document.getElementById("myMovieName").style.zIndex = 1;	
+						document.getElementById("myMovieName").style.left = 0;
+						document.getElementById("myMovieName").style.top = 0;
+						}
+
+						//Si esta oculta nota
+						jQuery(".top").css("display", ""); 
+						jQuery(".logo").css("display", ""); 
+						jQuery(".logo").css("display", ""); 
+						jQuery(".nota").css("display", ""); 
+						jQuery(".menuprincipal").css("display", "none");
+						jQuery(".nota_cerrado").css("display", "none");
+						jQuery(".top").css("display", ""); 
+						jQuery(".logo").css("display", ""); 
+						jQuery(".logo").css("display", ""); 
+						jQuery(".nota").css("display", "");
+						jQuery(".menuprincipal").css("display", "");
+						jQuery(".nota_cerrado").css("display", "none");
+
+						//zoom
+						if (document.getElementsByTagName("iframe")[0]!=null)
+						{
+						var iframe = document.getElementsByTagName("iframe")[0]
+						var doc = iframe.contentWindow.document
+						}
+
+						if (doc.getElementById("tabs")!=null)
+						{
+						doc.getElementById("tabs").style.transform = "scale(1,1)";	
+						doc.getElementById("tabs").style.margin = "0 auto";
+						doc.getElementById("tabs").style.marginTop = 0;
+						}
+
+						//Zona de botones
+						if (document.getElementById("screen")!=null)
+						{
+						document.getElementById("screen").style.position = "static";
+						document.getElementById("screen").style.marginTop = 0;			
+						document.getElementById("screen").style.backgroundColor = "transparent";
+						document.getElementById("screen").style.paddingLeft = "10px";	
+						document.getElementById("screen").style.paddingRight = "0px";
+						document.getElementById("screen").style.textAlign = "left";
+						document.getElementById("screen").style.lineHeight = "14px";
+						}
+
+						//Enlace	
+						if (document.getElementById("screen-link")!=null)
+						{	
+						document.getElementById("screen-link").innerHTML= "<i class='fa fa-arrows-alt'></i> Ver en pantalla completa";	
+						document.getElementById("screen-link").style.marginRight = "0px";	
+						}
+
+						//Scroll
+						document.body.style.overflow = "auto";	
+					}
+				}
+				else if (document.getElementById("myMovieName")!=null)
+				{
+					//Flash
+					if ((document.getElementById("myMovieName").width==702)	|| (document.getElementById("myMovieName").width=="702px"))
+					{
+						document.getElementById("ventana").innerHTML="";
+
+						//Ventana ampliadad
+						window.scrollTo(0, 0);
+
+						//Ventana de aplicacion
+						document.getElementById("myMovieName").width = "100%";
+						document.getElementById("myMovieName").height = "100%";	
+						document.getElementById("myMovieName").style.position = "absolute";
+						document.getElementById("myMovieName").style.top = "30px";
+						document.getElementById("myMovieName").style.left = 0;		
+						document.getElementById("myMovieName").style.zIndex = 10;	
+						document.getElementById("myMovieName").style.backgroundColor = "white";	
+		
+						//Zoom
+						var zoom = 0;
+						var altura = jQuery('object').attr('height');
+						var anchura = jQuery('object').attr('width');
+						//alert("Anchura: " + altura);
+						jQuery('object embed').attr('height',altura);
+						jQuery('object embed').attr('width',anchura);
+
+						//Zona de botones
+						document.getElementById("screen").style.top = 0;
+						document.getElementById("screen").style.left = 0;		
+						document.getElementById("screen").style.zIndex = 11;
+						document.getElementById("screen").style.position = "absolute";		
+						document.getElementById("screen").style.marginTop = document.getElementById("myMovieName").clientHeight;
+						document.getElementById("screen").style.backgroundColor = "rgb(231, 242, 251)";	 	
+						document.getElementById("screen").style.paddingRight = "10px";		
+						document.getElementById("screen").style.paddingLeft = "0px";
+						document.getElementById("screen").style.textAlign = "right";	
+						document.getElementById("screen").style.lineHeight = "30px";
+
+						//Enlace
+						document.getElementById("screen-link").innerHTML= "<i class='fa fa-times-circle'></i> Salir de pantalla completa";
+						document.getElementById("screen-link").style.marginRight = "10px";
+
+						//Scroll
+						document.body.style.overflow = "hidden";
+					}
+					else
+					{
+						//Ventana normal 
+						document.getElementById("ventana").innerHTML="";
+
+						//Ventana de aplicacion
+						document.getElementById("myMovieName").width = "702px";
+						document.getElementById("myMovieName").height = "402px";
+						document.getElementById("myMovieName").style.position = "static";		
+						document.getElementById("myMovieName").style.zIndex = 1;	
+						document.getElementById("myMovieName").style.left = 0;
+						document.getElementById("myMovieName").style.top = 0;
+
+						//Zoom
+						jQuery('object embed').attr('height','402px');
+						jQuery('object embed').attr('width','702px');
+		
+						//Zona de botones
+						document.getElementById("screen").style.position = "static";
+						document.getElementById("screen").style.marginTop = 0;			
+						document.getElementById("screen").style.backgroundColor = "transparent";
+						document.getElementById("screen").style.paddingLeft = "10px";	
+						document.getElementById("screen").style.paddingRight = "0px";
+						document.getElementById("screen").style.textAlign = "left";
+						document.getElementById("screen").style.lineHeight = "14px";
+
+						//Enlace		
+						document.getElementById("screen-link").innerHTML= "<i class='fa fa-arrows-alt'></i> Ver en pantalla completa";	
+						document.getElementById("screen-link").style.marginRight = "0px";	
+
+						//Scroll
+						document.body.style.overflow = "auto";	
+					}
+				}
+				else
+				{
+						//Cerrando el ejercicio
+						if (document.getElementById("ventana")!=null)
+						{
+						document.getElementById("ventana").innerHTML="";
+						}
+
+						//Ventana de aplicacion
+						if (document.getElementById("myMovieName")!=null)
+						{
+						document.getElementById("myMovieName").width = "702px";
+						document.getElementById("myMovieName").height = "402px";
+						document.getElementById("myMovieName").style.position = "static";		
+						document.getElementById("myMovieName").style.zIndex = 1;	
+						document.getElementById("myMovieName").style.left = 0;
+						document.getElementById("myMovieName").style.top = 0;
+						}
+
+						//Si esta oculta nota
+						jQuery(".top").css("display", ""); 
+						jQuery(".logo").css("display", ""); 
+						jQuery(".logo").css("display", ""); 
+						jQuery(".nota").css("display", ""); 
+						jQuery(".menuprincipal").css("display", "none");
+						jQuery(".nota_cerrado").css("display", "none");
+						jQuery(".top").css("display", ""); 
+						jQuery(".logo").css("display", ""); 
+						jQuery(".logo").css("display", ""); 
+						jQuery(".nota").css("display", "");
+						jQuery(".menuprincipal").css("display", "");
+						jQuery(".nota_cerrado").css("display", "none");
+
+						//zoom
+						if (document.getElementsByTagName("iframe")[0]!=null)
+						{
+						var iframe = document.getElementsByTagName("iframe")[0]
+						var doc = iframe.contentWindow.document
+						if (doc.getElementById("tabs")!=null)
+						{
+							doc.getElementById("tabs").style.transform = "scale(1,1)";	
+							doc.getElementById("tabs").style.margin = "0 auto";
+							doc.getElementById("tabs").style.marginTop = 0;
+						}
+						}
+
+						//Zona de botones
+						if (document.getElementById("screen")!=null)
+						{
+						document.getElementById("screen").style.position = "static";
+						document.getElementById("screen").style.marginTop = 0;			
+						document.getElementById("screen").style.backgroundColor = "transparent";
+						document.getElementById("screen").style.paddingLeft = "10px";	
+						document.getElementById("screen").style.paddingRight = "0px";
+						document.getElementById("screen").style.textAlign = "left";
+						document.getElementById("screen").style.lineHeight = "14px";
+						}
+
+						//Enlace	
+						if (document.getElementById("screen-link")!=null)
+						{	
+						document.getElementById("screen-link").innerHTML= "<i class='fa fa-arrows-alt'></i> Ver en pantalla completa";	
+						document.getElementById("screen-link").style.marginRight = "0px";	
+						}
+
+						//Scroll
+						document.body.style.overflow = "auto";	
+	
+				}
+
+
+				}
+
+
+			</script>
+						
+
+		</li>
+		<script>console.debug('Attach');</script>		<li class="titulo">
+
+
+				<a 
+				id="ejercicio_Movimiento_Rectilíneo_Acelerado_MRUA 2" 
+				href="https://aulaenred.fundacionibercaja.es/contenidos-didacticos/movimiento/mrua-2-3347/"
+								class="url_titulo" 
+				>
+				MRUA 2				</a>
+		
+
+						
+
+		</li>
+		<script>console.debug('Attach');</script>		<li class="titulo">
+
+
+				<a 
+				id="ejercicio_Movimiento_Rectilíneo_Acelerado_MRUA 3" 
+				href="https://aulaenred.fundacionibercaja.es/contenidos-didacticos/movimiento/mrua-3-3348/"
+								class="url_titulo" 
+				>
+				MRUA 3				</a>
+		
+
+						
+
+		</li>
+		<script>console.debug('Attach');</script>		<li class="titulo">
+
+
+				<a 
+				id="ejercicio_Movimiento_Rectilíneo_Acelerado_MRUA 4" 
+				href="https://aulaenred.fundacionibercaja.es/contenidos-didacticos/movimiento/mrua-4-3349/"
+								class="url_titulo" 
+				>
+				MRUA 4				</a>
+		
+
+						
+
+		</li>
+		<script>console.debug('Attach');</script>		<li class="titulo">
+
+
+				<a 
+				id="ejercicio_Movimiento_Rectilíneo_Acelerado_MRUA 5" 
+				href="https://aulaenred.fundacionibercaja.es/contenidos-didacticos/movimiento/mrua-5-3350/"
+								class="url_titulo" 
+				>
+				MRUA 5				</a>
+		
+
+						
+
+		</li>
+		<script>console.debug('Attach');</script>		<li class="titulo">
+
+
+				<a 
+				id="ejercicio_Movimiento_Rectilíneo_Acelerado_MRUA 6" 
+				href="https://aulaenred.fundacionibercaja.es/contenidos-didacticos/movimiento/mrua-6-3351/"
+								class="url_titulo" 
+				>
+				MRUA 6				</a>
+		
+
+						
+
+		</li>
+		<script>console.debug('Attach');</script>		<li class="titulo">
+
+
+				<a 
+				id="ejercicio_Movimiento_Rectilíneo_Acelerado_MRUA 7" 
+				href="https://aulaenred.fundacionibercaja.es/contenidos-didacticos/movimiento/mrua-7-3352/"
+								class="url_titulo" 
+				>
+				MRUA 7				</a>
+		
+
+						
+
+		</li>
+		<script>console.debug('Attach');</script>		<li class="titulo">
+
+
+				<a 
+				id="ejercicio_Movimiento_Rectilíneo_Acelerado_MRUA 8" 
+				href="https://aulaenred.fundacionibercaja.es/contenidos-didacticos/movimiento/mrua-8-3353/"
+								class="url_titulo" 
+				>
+				MRUA 8				</a>
+		
+
+						
+
+		</li>
+		<script>console.debug('Attach');</script>		<li class="titulo">
+
+
+				<a 
+				id="ejercicio_Movimiento_Rectilíneo_Acelerado_MRUA 9" 
+				href="https://aulaenred.fundacionibercaja.es/contenidos-didacticos/movimiento/mrua-9-3354/"
+								class="url_titulo" 
+				>
+				MRUA 9				</a>
+		
+
+						
+
+		</li>
+		<script>console.debug('Attach');</script>		<li class="titulo">
+
+
+				<a 
+				id="ejercicio_Movimiento_Rectilíneo_Acelerado_MRUA 10" 
+				href="https://aulaenred.fundacionibercaja.es/contenidos-didacticos/movimiento/mrua-10-3355/"
+								class="url_titulo" 
+				>
+				MRUA 10				</a>
+		
+
+						
+
+		</li>
+		<script>console.debug('Attach');</script>			</ul>
+			</li>
+		</ul>
+		</div>
+<script>console.debug('Ejercicio id:3346');</script><script>console.debug('Ejercicio id:3340');</script><script>console.debug('Ejercicio id:3346');</script><script>console.debug('Ejercicio id:3341');</script><script>console.debug('Ejercicio id:3346');</script><script>console.debug('Ejercicio id:3342');</script><script>console.debug('Ejercicio id:3346');</script><script>console.debug('Ejercicio id:3343');</script><script>console.debug('Ejercicio id:3346');</script><script>console.debug('Ejercicio id:3344');</script><script>console.debug('Ejercicio id:3346');</script><script>console.debug('Ejercicio id:3345');</script><script>console.debug('Ejercicio id:3346');</script><script>console.debug('Ejercicio id:3346');</script>
+<script>console.debug('bien...');</script><div class="c-actividad__media c-actividad__media--html5">
+
+	<div class="c-actividad__media__title u-only-mobile">
+	    <h1>MRUA 1</h1>
+	    <a href="?ejercicio_id=menu">Selecciona nuevo tema ›</a>
+
+	    
+  	</div>
+
+	<div id="contenidounidadFlashWrapper" class="c-actividad__media__content">
+
+		<div class="c-actividad__media__content__description">
+			<h2>
+				MRUA 1			</h2>
+		 	<p>
+ 				Comprueba en la simulación cómo la velocidad inicial y la aceleración afectan al movimiento de un coche y a la gráfica v-t de su movimiento rectilíneo uniformemente acelerado.		 	</p>
+		 	<button class="c-btn" onclick="jQuery(this).parent().hide(); return false;">Comenzar</button>
+	 	</div>
+
+	 	<div id="contenidounidadFlash" class="c-actividad__media__content__iframe-wrap">
+     	</div>
+
+	</div>
+
+	 	<a class="pantalla-completa  u-only-desktop textoazul">
+		Ver en pantalla completa</a>
+ 	
+	<script>console.debug('Ejercicio id:3346');</script><script>console.debug('Ejercicio id:3347');</script><script>console.debug('Ejercicio id:3346');</script><script>console.debug('Ejercicio id:3348');</script><script>console.debug('Ejercicio id:3346');</script><script>console.debug('Ejercicio id:3349');</script><script>console.debug('Ejercicio id:3346');</script><script>console.debug('Ejercicio id:3350');</script><script>console.debug('Ejercicio id:3346');</script><script>console.debug('Ejercicio id:3351');</script><script>console.debug('Ejercicio id:3346');</script><script>console.debug('Ejercicio id:3352');</script><script>console.debug('Ejercicio id:3346');</script><script>console.debug('Ejercicio id:3353');</script><script>console.debug('Ejercicio id:3346');</script><script>console.debug('Ejercicio id:3354');</script><script>console.debug('Ejercicio id:3346');</script><script>console.debug('Ejercicio id:3355');</script>
+
+	
+
+
+	<div class="c-actividad__media__share  c-share">
+		<h3>Comparte este contenido:</h3>
+     	<ul class="c-share__wrap">
+			<li><a href="https://www.facebook.com/sharer/sharer.php?url=https%3A%2F%2Faulaenred.fundacionibercaja.es%2Fcontenidos-didacticos%2Fmovimiento%2F" target="_blank">
+				<img src="https://aulaenred.fundacionibercaja.es/wp-content/themes/aula-en-red/images2017/facebook.png" alt=""></a></li>
+			<li><a href="https://twitter.com/share?text=Comparte&amp;url=https%3A%2F%2Faulaenred.fundacionibercaja.es%2Fcontenidos-didacticos%2Fmovimiento%2F" target="_blank">
+				<img src="https://aulaenred.fundacionibercaja.es/wp-content/themes/aula-en-red/images2017/twitter.png" alt=""></a></li>
+			<li><a href="whatsapp://send?text=https%3A%2F%2Faulaenred.fundacionibercaja.es%2Fcontenidos-didacticos%2Fmovimiento%2F" target="_blank">
+				<img src="https://aulaenred.fundacionibercaja.es/wp-content/themes/aula-en-red/images2017/whatsapp.png" alt=""></a></li>
+		</ul>
+	</div>
+
+
+
+
+</div>
+
+<div class="clearfloat"></div>	
+</div>
+
+
+
+<div class="filacuerpo  c-actividades__otras-actividades">
+<div class="bloque">
+	<div class="cintillo">
+		<div class="titulo">
+			Otras actividades que te pueden interesar
+		</div>
+	</div>
+
+	<div class="fila">
+
+		<div class="c-columns">
+						<p><a href="https://aulaenred.fundacionibercaja.es/contenidos-didacticos/hay-alguien-ahi-fuera/">¿Hay alguien ahí fuera?</a></p>
+						<p><a href="https://aulaenred.fundacionibercaja.es/contenidos-didacticos/movimiento-circular/">Movimiento Circular</a></p>
+						<p><a href="https://aulaenred.fundacionibercaja.es/contenidos-didacticos/maquinas-termicas/">Máquinas térmicas</a></p>
+						<p><a href="https://aulaenred.fundacionibercaja.es/contenidos-didacticos/formulacion-de-quimica-inorganica/">Formulación y nomenclatura de Química Inorgánica</a></p>
+					</div>
+
+	</div>
+</div>
+</div>
+
+
+
+</div>
+
+<script>
+
+
+jQuery(document).ready(function( $ ) {
+
+	var html5FullScreen = isfullscreenEnabled();
+
+	if (isfullscreenEnabled()) {
+		$('#screen-link').on('click', function(e) {
+			e.preventDefault();
+
+			var el = document.getElementById('ficha');
+			requestFullScreen(el);
+				
+		});
+	} else {
+		$('#screen').hide();
+	}
+
+});
+
+</script>
+
+
+			<!--bloque otras actividades-->
+            <!--Linea separacion-->
+            
+        </div>
+    </div>
+    <div class="footer">
+                <div class="final">
+            <div class="grupofinal" style="display: flex;">
+                <div class="texto fltlft" style="align-self: flex-end;">
+                    <a href="https://www.fundacionibercaja.es/" alt="Fundación Ibercaja" target="_blank"><img src="https://aulaenred.fundacionibercaja.es/wp-content/themes/aula-en-red/images/fundacionbancariablanco.png" alt="Fundación Ibercaja" width="119" height="38" id="ibercajablanco"  /></a>
+                    <p>
+                        <strong>Fundaci&oacute;n Bancaria Ibercaja. C.I.F. G-50000652.</strong><br />
+			             Inscrita en el Registro de Fundaciones del M&deg; de Educaci&oacute;n, Cultura y Deporte con el n&deg; 1689.<br />
+			             Domicilio social: Joaqu&iacute;n Costa, 13. 50001 Zaragoza.
+                    </p>
+                </div>
+                <div class="logotipos fltrt" style="display: flex;">
+                   
+                    <div class="enlaces" style="align-self: flex-end; display: flex;">
+		              <div style="text-align:right; float:right; margin-bottom: auto;">
+                    	<a href="https://www.fundacionibercaja.es/contenidos/aviso-legal/" class="fltlft">Aviso legal</a>
+						<span class="fltlft">|</span>
+						<a href="https://www.fundacionibercaja.es/contenidos/politica-de-privacidad/" class="fltlft">Política de privacidad</a>
+						<span class="fltlft">|</span>
+						<a href="https://www.fundacionibercaja.es/contenidos/politica-de-cookies/" class="fltlft">Política de cookies</a>
+						<span class="fltlft">|</span>
+                    	<a href="/contacto/" class="fltlft">Contacto</a>
+			          </div>
+                    </div>
+                </div>
+                <div class="clearfloat"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+jQuery(document).ready(function () {
+    jQuery('#dialog_link').click(function () {
+        jQuery('#dialog').dialog('open');
+        return false;
+    });
+});
+</script>
+
+<!--googleoff: all--><div id="cookie-law-info-bar" data-nosnippet="true"><span>Información acerca de las cookies utilizadas<br />
+<br />
+Le informamos que en el transcurso de su navegación por los sitios web del grupo Ibercaja, se utilizan cookies propias y de terceros (ficheros de datos anónimos), las cuales se almacenan en el dispositivo del usuario, de manera no intrusiva. Estos datos se utilizan exclusivamente para habilitar y estudiar de forma anónima algunas interacciones de la navegación en un sitio Web, y acumulan datos que pueden ser actualizados y recuperados. En el caso de que usted siga navegando por nuestro sitio Web implica que acepta el uso de las cookies indicadas. Puede obtener más información, o bien conocer cómo cambiar la configuración, en nuestra sección  <a href="https://www.fundacionbancariaibercaja.es/avisos-legales/politica-de-cookies/" id="CONSTANT_OPEN_URL" class="cli-plugin-main-link">Política de cookies</a><br />
+<a role='button' data-cli_action="accept" id="cookie_action_close_header" class="medium cli-plugin-button cli-plugin-main-button cookie_action_close_header cli_action_button wt-cli-accept-btn">Cerrar</a></span></div><div id="cookie-law-info-again" data-nosnippet="true"><span id="cookie_hdr_showagain">Privacy &amp; Cookies Policy</span></div><div class="cli-modal" data-nosnippet="true" id="cliSettingsPopup" tabindex="-1" role="dialog" aria-labelledby="cliSettingsPopup" aria-hidden="true">
+  <div class="cli-modal-dialog" role="document">
+	<div class="cli-modal-content cli-bar-popup">
+		  <button type="button" class="cli-modal-close" id="cliModalClose">
+			<svg class="" viewBox="0 0 24 24"><path d="M19 6.41l-1.41-1.41-5.59 5.59-5.59-5.59-1.41 1.41 5.59 5.59-5.59 5.59 1.41 1.41 5.59-5.59 5.59 5.59 1.41-1.41-5.59-5.59z"></path><path d="M0 0h24v24h-24z" fill="none"></path></svg>
+			<span class="wt-cli-sr-only">Cerrar</span>
+		  </button>
+		  <div class="cli-modal-body">
+			<div class="cli-container-fluid cli-tab-container">
+	<div class="cli-row">
+		<div class="cli-col-12 cli-align-items-stretch cli-px-0">
+			<div class="cli-privacy-overview">
+				<h4>Privacy Overview</h4>				<div class="cli-privacy-content">
+					<div class="cli-privacy-content-text">This website uses cookies to improve your experience while you navigate through the website. Out of these cookies, the cookies that are categorized as necessary are stored on your browser as they are essential for the working of basic functionalities of the website. We also use third-party cookies that help us analyze and understand how you use this website. These cookies will be stored in your browser only with your consent. You also have the option to opt-out of these cookies. But opting out of some of these cookies may have an effect on your browsing experience.</div>
+				</div>
+				<a class="cli-privacy-readmore" aria-label="Mostrar más" role="button" data-readmore-text="Mostrar más" data-readless-text="Mostrar menos"></a>			</div>
+		</div>
+		<div class="cli-col-12 cli-align-items-stretch cli-px-0 cli-tab-section-container">
+												<div class="cli-tab-section">
+						<div class="cli-tab-header">
+							<a role="button" tabindex="0" class="cli-nav-link cli-settings-mobile" data-target="necessary" data-toggle="cli-toggle-tab">
+								Necessary							</a>
+															<div class="wt-cli-necessary-checkbox">
+									<input type="checkbox" class="cli-user-preference-checkbox"  id="wt-cli-checkbox-necessary" data-id="checkbox-necessary" checked="checked"  />
+									<label class="form-check-label" for="wt-cli-checkbox-necessary">Necessary</label>
+								</div>
+								<span class="cli-necessary-caption">Siempre activado</span>
+													</div>
+						<div class="cli-tab-content">
+							<div class="cli-tab-pane cli-fade" data-id="necessary">
+								<div class="wt-cli-cookie-description">
+									Necessary cookies are absolutely essential for the website to function properly. This category only includes cookies that ensures basic functionalities and security features of the website. These cookies do not store any personal information.								</div>
+							</div>
+						</div>
+					</div>
+																	<div class="cli-tab-section">
+						<div class="cli-tab-header">
+							<a role="button" tabindex="0" class="cli-nav-link cli-settings-mobile" data-target="non-necessary" data-toggle="cli-toggle-tab">
+								Non-necessary							</a>
+															<div class="cli-switch">
+									<input type="checkbox" id="wt-cli-checkbox-non-necessary" class="cli-user-preference-checkbox"  data-id="checkbox-non-necessary" checked='checked' />
+									<label for="wt-cli-checkbox-non-necessary" class="cli-slider" data-cli-enable="Activado" data-cli-disable="Desactivado"><span class="wt-cli-sr-only">Non-necessary</span></label>
+								</div>
+													</div>
+						<div class="cli-tab-content">
+							<div class="cli-tab-pane cli-fade" data-id="non-necessary">
+								<div class="wt-cli-cookie-description">
+									Any cookies that may not be particularly necessary for the website to function and is used specifically to collect user personal data via analytics, ads, other embedded contents are termed as non-necessary cookies. It is mandatory to procure user consent prior to running these cookies on your website.								</div>
+							</div>
+						</div>
+					</div>
+										</div>
+	</div>
+</div>
+		  </div>
+		  <div class="cli-modal-footer">
+			<div class="wt-cli-element cli-container-fluid cli-tab-container">
+				<div class="cli-row">
+					<div class="cli-col-12 cli-align-items-stretch cli-px-0">
+						<div class="cli-tab-footer wt-cli-privacy-overview-actions">
+						
+															<a id="wt-cli-privacy-save-btn" role="button" tabindex="0" data-cli-action="accept" class="wt-cli-privacy-btn cli_setting_save_button wt-cli-privacy-accept-btn cli-btn">GUARDAR Y ACEPTAR</a>
+													</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+  </div>
+</div>
+<div class="cli-modal-backdrop cli-fade cli-settings-overlay"></div>
+<div class="cli-modal-backdrop cli-fade cli-popupbar-overlay"></div>
+<!--googleon: all--><script type='text/javascript' src='https://aulaenred.fundacionibercaja.es/wp-content/plugins/contact-form-7/includes/swv/js/index.js?ver=5.6.4' id='swv-js'></script>
+<script type='text/javascript' id='contact-form-7-js-extra'>
+/* <![CDATA[ */
+var wpcf7 = {"api":{"root":"https:\/\/aulaenred.fundacionibercaja.es\/wp-json\/","namespace":"contact-form-7\/v1"}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://aulaenred.fundacionibercaja.es/wp-content/plugins/contact-form-7/includes/js/index.js?ver=5.6.4' id='contact-form-7-js'></script>
+<script type='text/javascript' src='https://aulaenred.fundacionibercaja.es/wp-content/themes/aula-en-red/js/navigation.js?ver=1.0' id='aulaenred-navigation-js'></script>
+</body>
+</html>
+
+<!-- Page supported by LiteSpeed Cache 5.5 on 2023-09-23 21:18:46 -->

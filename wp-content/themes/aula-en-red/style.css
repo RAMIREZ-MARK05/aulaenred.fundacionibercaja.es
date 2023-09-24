@@ -1,0 +1,2486 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: "IbercajaBold";
+    src:  url("fonts/Ibercaja-Bold.eot") format("eot"),
+        url("fonts/Ibercaja-Bold.woff2") format("woff2"),
+        url("fonts/Ibercaja-Bold.woff") format("woff"),
+        url("fonts/Ibercaja-Bold.ttf") format("truetype"),
+        url("fonts/Ibercaja-Bold.svg") format("svg");
+    font-style: normal;
+    font-weight: 700;
+}
+
+body {
+    font-family:Verdana;
+    font-size: 12px;
+	margin: 0;
+	padding: 0;
+	color: #000;
+}
+/* ~~ Selectores de elemento/etiqueta ~~ */
+ul, ol, dl { 
+	padding: 0;
+	margin: 0;
+}
+h1, h2, h3, h4, h5, h6, p {
+	margin-top: 0;	 
+	margin-bottom:0;
+	padding-right: 0;
+	padding-left: 0; 
+    font-weight:normal;
+}
+a img { 
+	border: none;
+	max-width:940px;
+}
+
+a:link {
+	color: #0062ae;
+	text-decoration: none;
+}
+a:visited {
+	color: #0062ae;
+	text-decoration: none;
+}
+a:hover, a:active, a:focus { 
+	text-decoration: none;
+}
+
+h1{
+    font-family:"IbercajaBold";
+    font-size:25px;
+    text-transform:uppercase;
+}
+
+.curso_h2
+{
+    color: black;
+    font-family: 'IbercajaBold';
+    font-size: 25px;
+    font-weight:normal;
+    text-transform: uppercase;
+}
+
+
+.container {
+	width: 100%;
+    background:fixed url('images/ibercaja-aulaenred-fondo.png') repeat;
+	background-color:#e5eff7;
+	margin: 0 auto; 
+}
+
+.header {
+	/*height:220px;*/
+	background: #fbf7d7;
+}
+
+.top{
+	height:30px;
+	background-color:#0062ae;
+	/*vertical-align:middle;*/
+}
+
+.grupotop{
+	width:980px;
+	margin:0 auto;
+	text-transform:uppercase;
+	font-family: "IbercajaBold";
+	font-size:11px;
+	color:#fff;
+}
+
+.derecha{
+	float:right;
+}
+.grupotop .fltlft{
+	padding-left: 20px;
+	text-align:left;
+	height:30px;
+	line-height:30px;
+}
+.grupotop .fltrt{
+	padding-right: 20px;
+	text-align:right;
+	height:30px;
+	line-height:30px;
+}
+.grupotop a.blanco {
+    color:#fff;
+    font-size:11px;
+    font-weight:normal;
+}
+
+.grupotop a.blanco:hover, a.blanco:active, a.blanco:focus{
+    text-decoration:underline;
+}
+
+.logo{
+	height:70px;
+	background-color:#fff;
+}
+.grupologo{
+	width:980px;
+	margin-left:auto;
+	margin-right:auto;
+	height:70px;
+}
+#aulaenred{
+    /*background:url('images/fondoaulaenred.png') no-repeat 15px 0px;*/
+    width:321px;
+    height:240px;
+    overflow:visible;
+    position:relative;
+    z-index:9;
+    top:0;
+    left:0;
+    font-family:"IbercajaBold";
+    color:#fff;
+    text-transform:uppercase;
+}
+
+.grupologo #aulaenred h3
+{
+    font-size: 45px;
+    line-height: 45px;
+    text-decoration:none;
+    padding-left: 56px;
+    padding-top: 35px;
+    padding-bottom: 7px;
+}
+
+#aulaenred h3
+{
+    font-size:15px;
+    text-decoration:underline;
+    line-height:21px;
+    padding-left:56px;
+	padding-top:20px;
+	padding-bottom:7px;
+}
+
+#aulaenred h1{
+    font-size:45px;
+    line-height:87%;
+    padding-left:56px;
+}
+
+#aulaenred a, #aulaenred a:link { 
+	color:#fff;
+    background:url('images/fondoaulaenred.png') no-repeat 15px 0px;
+    height:240px;
+    display:inline-block;
+	width:321px;
+}
+
+#aulaenred a:hover, a:active #aulaenred, a:focus #aulaenred { 
+	color:#fff;
+    background:url('images/fondoaulaenred_hover.png') no-repeat 15px 0px;
+}
+
+#ibercaja{
+	width:119px;
+	height:31px;
+    padding-top:19px;
+    margin-right:20px;
+}
+
+.nota {
+    height:120px;
+    background:fixed url('images/cuadriculamosaico.png') repeat;
+    background-color:#fbf7d7;
+}
+.nota_cerrado {
+    height:60px;
+    background:fixed url('images/cuadriculamosaico.png') repeat;
+    background-color:#fbf7d7;
+}
+.gruponota{
+    width:940px;
+    height:120px;
+    margin:0 auto;
+}
+.gruponota_cerrado{
+	width:940px;
+    margin:0 auto;
+	line-height:60px;
+}
+
+.gruponota_cerrado .fltrt {
+    margin: auto 0;
+    text-align:right;
+}
+
+.gruponota_cerrado .fltrt a:hover, .gruponota_cerrado .fltrt a:active, .gruponota_cerrado .fltrt a:focus{
+    background-color:#0062ae;
+    color:#fff;
+}
+
+a.enlace:hover, a.enlace:active, a.enlace:focus{
+    background-color:#0062ae;
+    color:#fff;
+}
+
+.mensajenota {
+    height:90px;
+    width:619px;
+    height:90px;
+    margin-top:15px;
+    background-color:#fff;
+    -webkit-box-shadow: 1px 2px 0px 0px rgba(0,0,0,0.1);
+    -moz-box-shadow: 1px 2px 0px 0px rgba(0,0,0,0.1);
+    box-shadow: 1px 2px 0px 0px rgba(0,0,0,0.1);
+}
+
+.mensajenota .texto13{
+    padding-top:10px;
+    padding-left:15px;
+    width:502px;
+}
+.mensajenota .enlace{
+    padding-right:10px;
+    padding-left:5px;
+    padding-top:5px;
+}
+.mensajenota .enlace a:hover {
+	background-color:#0062ae;
+	color:#fff;	
+}
+
+.menuprincipal{
+    background-color:#0062ae;
+    height:95px;
+}
+.menuprincipal_cerrado{
+    height:155px;
+}
+.grupomenuprincipal{
+    width:940px;
+    height:95px;
+    margin: 0 auto;
+}
+
+/**********************/
+	.grupomenuprincipal ul.fltrt, .grupomenuprincipal div.fltrt > ul {
+		/*border-bottom: 1px solid #ededed;
+		border-top: 1px solid #ededed;
+		display: inline-block !important;
+		text-align: left;
+		width: 100%;*/
+        width:632px;
+        display: inline-block !important;
+        font-family: "IbercajaBold";
+        font-size:15px;
+        line-height:15px;
+        /*margin-top:22px;*/
+        color:#fff;
+	}
+	.grupoemenuprincipal ul {
+		margin: 0;
+		text-indent: 0;
+	}
+	.grupomenuprincipal > li {
+        width:111px;
+	    vertical-align:top;
+	}
+	.grupomenuprincipal li {
+		display: inline-block;
+		text-decoration: none;
+        /*padding-left:10px;*/
+        text-align:justify;
+	}
+
+	.grupomenuprincipal li > a{
+		display: inline-block;
+		text-decoration: none;
+        padding-left:10px;
+        padding-top:22px;
+        height:60px;
+        width:116px;
+        text-align:justify;
+	    vertical-align:top;
+        text-transform: uppercase;
+        background:url('images/flechaabajo.png') no-repeat 10px 60px;
+	}
+
+	.grupomenuprincipal li a {
+		border-bottom: 0;
+		color: #fff;
+		
+	}
+	
+   
+    .grupomenuprincipal li:hover, .grupomenuprincipal li:focus, .grupomenuprincipal li:active {
+		color: #fff;
+        background-color:#707070;
+	}
+    .grupomenuprincipal li a:hover, .grupomenuprincipal li a:focus, .grupomenuprincipal li a:active {
+		color: #fff;
+        background-color:#707070;
+	}
+    .grupomenuprincipal li > a:hover, .grupomenuprincipal li > a:focus, .grupomenuprincipal li > a:active {
+		color: #fff;
+        background-color:#707070;
+        background:url('images/flechaarriba.png') no-repeat 10px 60px;
+	}
+	.grupomenuprincipal li {
+		/*margin: 0 40px 0 0;
+		margin: 0 2.857142857rem 0 0;*/
+		position: relative;
+		float:left;
+	}
+	.grupomenuprincipal li ul {
+		margin: 0;
+		padding: 0;
+		position: absolute;
+		top: 100%;
+		z-index: 1;
+		height: 1px;
+		width: 1px;
+		overflow: hidden;
+		clip: rect(1px, 1px, 1px, 1px);
+        min-width:111px;
+        max-width:209px;
+        width:209px;
+	}
+
+	.grupomenuprincipal li ul ul {
+		top: 0;
+		left: 100%;
+	}
+	.grupomenuprincipal ul li:hover > ul, .grupomenuprincipal ul li:focus > ul, .grupomenuprincipal .focus > ul {
+		border-left: 0;
+		clip: inherit;
+		overflow: inherit;
+		height: inherit;
+		width: inherit;
+	}
+    .grupomenuprincipal li ul li {
+        padding-left:0px;
+       /* width:inherit;*/
+    }
+
+     .grupomenuprincipal li ul li > a{
+        padding-left:10px;
+        padding-top:5px;
+        height:auto;
+        min-width:111px;
+        max-width:209px;
+	    vertical-align:top;
+	}
+
+
+	.grupomenuprincipal li ul li a {
+		background: #707070;
+		border-top: 1px dotted #fff;
+		display: block;
+		font-size: 12px;
+        font-family:Verdana;
+        min-height:30px;
+        line-height:22px;
+        text-align:left;
+		/*white-space: normal;*/
+        text-transform:none;
+        width:209px;
+	}
+    .grupomenuprincipal li ul li.vertodo a {
+		font-size: 9px;
+	}
+	.grupomenuprincipal li ul li a:hover, .grupomenuprincipal li ul li a:focus {
+		background: #707070;
+		color: #fff;
+        font-weight:bold;
+        text-decoration:underline;
+	}
+	.grupomenuprincipal .current-menu-item > a,
+	.grupomenuprincipal .current-menu-ancestor > a,
+	.grupomenuprincipal .current_page_item > a,
+	.grupomenuprincipal .current_page_ancestor > a {
+		color: #fff;
+        background-color:#707070;
+/*		font-weight: bold;*/
+	}
+	.grupomenuprincipal li ul .current-menu-item > a,
+	.grupomenuprincipal li ul .current-menu-ancestor > a,
+	.grupomenuprincipal li ul .current_page_item > a,
+	.grupomenuprincipal li ul .current_page_ancestor > a {
+		font-weight: bold;
+	}
+/**********************/
+
+
+
+#menu-profesor {
+    width:400px;
+}
+#enlacemenu {
+    width:230px;
+}
+    #enlacemenu a.botonblanco {
+        line-height:35px;
+        font-family:"IbercajaBold";
+        font-size:15px;
+        color:#000;
+        background-color:#e5eff7;
+        display:block;
+        text-align:center;
+        text-transform:uppercase;
+        border-radius: 3px;
+        -moz-border-radius: 3px;
+        -webkit-border-radius: 3px;
+        margin-top:10px;
+    }
+    #enlacemenu a.botonblanco:hover, #enlacemenu a.botonblanco:focus, #enlacemenu a.botonblanco:active{
+        color:#000;
+        background-color:#4891dc;
+        
+    }
+    #usuariologueado {
+        color: #fff;
+        font-size: 14px;
+        font-weight: bold;
+        height: 30px;
+        padding-top: 10px;
+    }
+    #usuariologueado.textoazul {
+        color: #707070;
+        padding-top:3px;
+    }
+#volver {
+    text-align:right;
+}
+#site-navigation.fltlft {
+    margin-left:310px;
+}
+
+
+.content {
+    
+}
+.content_cerrado {
+    top: -45px;
+    position:relative;
+}
+
+.cuerpo{
+    margin:-10px auto;
+    width:980px;
+    background-color:#fff;
+    /*padding:20px;*/
+    padding-top:20px;
+    padding-bottom:20px;
+    -webkit-box-shadow: 1px 1px 2px 1px rgba(0,0,0,0.1);
+    -moz-box-shadow: 1px 1px 2px 1px rgba(0,0,0,0.1);
+    box-shadow: 1px 1px 2px 1px rgba(0,0,0,0.1);
+    /*border: 1px solid #c9c9c9;
+    -webkit-box-shadow: 1px 2px 0px 0px rgba(0,0,0,0.1);
+    -moz-box-shadow: 1px 2px 0px 0px rgba(0,0,0,0.1);
+    box-shadow: 1px 2px 0px 0px rgba(0,0,0,0.1);*/
+
+}
+.filacuerpo{
+    margin-bottom:20px;
+    padding-left:20px;
+    padding-right: 20px;
+}
+.filacuerpoSM{
+    padding-left:20px;
+    padding-right: 20px;
+}
+/*Home*/
+.bloque1{
+    width:620px;
+    height:350px;
+    border: 1px solid #c9c9c9;
+    -webkit-box-shadow: 1px 2px 0px 0px rgba(0,0,0,0.1);
+    -moz-box-shadow: 1px 2px 0px 0px rgba(0,0,0,0.1);
+    box-shadow: 1px 2px 0px 0px rgba(0,0,0,0.1);
+    margin-bottom:20px;
+}
+
+.bloque1 div.fltlft{
+    width:340px;
+    height:345px;
+    padding-left:20px;
+    padding-top:15px;
+}
+
+.bloque1 div.fltrt{
+    width:260px;
+    height:350px;
+}
+
+    .bloque1 div.fltrt img {
+        width:260px;
+        height:350px;
+    }
+.bloque1 h1, .unbloque h1, .unbloquesin h1{
+    font-family:"IbercajaBold";
+    font-size:35px;
+    line-height:35px;
+    text-transform:uppercase;
+}
+
+.bloque1 p, .unbloque p, .unbloquesin p, .dosbloques p{ 
+    padding-top:15px;
+}
+
+
+.bloque1 .boton, .unbloque .boton{
+    height:40px;
+    margin-top:30px;
+    margin-bottom:20px;
+    line-height:40px;
+}
+
+a.boton:hover, a.boton:hover{
+    background-color:#0062ae;
+}
+
+
+.bloque300{
+    width:300px;
+    height:350px;
+    border: 1px solid #c9c9c9;
+    -webkit-box-shadow: 1px 2px 0px 0px rgba(0,0,0,0.1);
+    -moz-box-shadow: 1px 2px 0px 0px rgba(0,0,0,0.1);
+    box-shadow: 1px 2px 0px 0px rgba(0,0,0,0.1);
+    margin-bottom:20px;
+}
+
+    .bloque300 img {
+        width:300px;
+        height:165px;
+    }
+
+    .bloque300 .foto {
+        height:165px;
+    }
+
+.bloque300 .esquinaproja{
+    padding-left:17px;
+    padding-top:12px;
+    padding-right:15px;
+}
+
+.bloque300 h1, .dosbloques h1{
+    font-family:"IbercajaBold";
+    font-size:25px;
+    line-height:25px;
+    text-transform:uppercase;
+}
+
+.bloque300 h1{
+    font-family:"IbercajaBold";
+    font-size:23px;
+    line-height:25px;
+    text-transform:uppercase;
+    width:280px;
+    height:25px;
+    overflow:hidden;
+}
+
+
+.bloque300 p{
+    padding-top:10px;
+    height:48px;
+}
+
+.bloque300 .boton
+{
+    height:30px;
+    margin-top:15px;
+    margin-bottom:15px;
+    line-height:30px;
+    padding-left:15px;
+    padding-right:15px;
+}
+
+.dosbloques .boton
+{
+    height:30px;
+    margin-top:15px;
+    margin-bottom:15px;
+    line-height:30px;
+}
+
+.unbloquesin .boton{
+    height:40px;
+    margin-top:20px;
+    margin-bottom:20px;
+    line-height:40px;
+}
+.unbloque, .unbloquesin{
+    height:310px;
+    width:940px;
+    border: 1px solid #c9c9c9;
+    -webkit-box-shadow: 1px 2px 0px 0px rgba(0,0,0,0.1);
+    -moz-box-shadow: 1px 2px 0px 0px rgba(0,0,0,0.1);
+    box-shadow: 1px 2px 0px 0px rgba(0,0,0,0.1);
+}
+.unbloque div.fltlft{
+    width:478px;
+    padding-left:20px;
+    padding-top:15px;
+}
+
+.unbloque div.fltrt{
+    width:415px;
+}
+
+.unbloque .esquinaroja{
+    /*padding-right:25px;*/
+    padding-top:15px;
+}
+
+.bloque300.esquinapazul.fltrt > div.fila.esquinablanca
+{
+    padding-right:15px;
+    padding-left:15px;
+    padding-top:5px;
+    padding-bottom:0px;
+}
+
+    .unbloque .esquinaroja img {
+        width:413px;
+        height:279px;
+    }
+
+.unbloque p, .unbloquesin p{
+    width:415px;
+}
+.unbloque strong, .unbloquesin strong{
+    color:#0062ae;
+}
+
+.unbloque .enlace, .unbloquesin .enlace{
+    font-family:Verdana;
+    font-size:11px;
+    font-weight:bold;
+    padding-left:15px;
+    padding-right:15px;
+    display:inline-block;
+}
+
+.unbloquesin div.fltlft{
+    width:460px;
+    padding-left:0px;
+    padding-top:0px;
+}
+
+    .unbloquesin div.fltlft img{
+        width:460px;
+        height:310px;
+    }
+
+.unbloquesin div.fltrt{
+    width:480px;
+	height:310px;
+}
+
+.unbloquesin .esquinaroja{
+	width:430px;
+	height:295px;
+    padding-right:25px;
+    padding-left:25px;
+    padding-top:15px;
+}
+
+.dosbloques{
+	width:460px;
+	height:310px;
+    border: 1px solid #c9c9c9;
+    -webkit-box-shadow: 1px 2px 0px 0px rgba(0,0,0,0.1);
+    -moz-box-shadow: 1px 2px 0px 0px rgba(0,0,0,0.1);
+    box-shadow: 1px 2px 0px 0px rgba(0,0,0,0.1);
+
+}
+
+.dosbloques .boton{
+    margin-top:25px;
+}
+.dosbloques .fltlft{
+	width:155px;
+}
+
+.dosbloques .fltlft img {
+        width:155px;
+        height:310px;
+    }
+
+.dosbloques .fltrt{
+	width: 304px;
+	height:310px;
+}
+.dosbloques .fltrt .esquinaroja
+{
+	padding-top:60px;
+	padding-left:10px;
+	padding-right:0px;
+}
+
+.dosbloques .fltrt .fila_imagen
+{
+        width:155px;
+        height:310px;
+}
+
+
+.dosbloques .fltrt .fila_imagen img
+{
+        width:155px;
+        height:310px;
+}
+
+
+.dosbloques .fila 
+{
+	padding-top:39px;
+	padding-left:0px;
+	padding-right:0px;
+	float:right;
+	width:295px;
+	/* background: url('images/esquinaroja.png') no-repeat; */
+	background-position: right top;
+}
+
+.dosbloques .fila_imagen
+{
+	width: 155px;
+	height: 310px;
+	float:left;
+}
+
+.dosbloques .fila_imagen img
+{
+	width:155px;
+	height:310px;
+}
+
+.dosbloques.esquinaazul.fltrt .esquinaroja img
+{
+        width:155px;
+        height:310px;
+}
+
+.dosbloques .fila img {
+        width:460px;
+        height:156px;
+    }
+
+.dosbloques .fila p{
+	width:236px;
+	display:inline-block;
+	float:left;
+}
+
+.dosbloques .fila .boton{
+	vertical-align:top;
+	/*margin-left:40px;*/
+}
+
+
+.separacion{
+    background:url('images/puntogris.png') repeat-x;
+    background-position:center center;
+    height:1px;
+    margin-top:40px;
+    margin-bottom:20px;
+    text-align:center;
+	width:100%;
+	float:left;
+}
+
+.alto21{
+    height:21px;
+}
+
+.separacion h4{
+    background-color:#fff;
+    font-family:"IbercajaBold";
+    color:#707070;
+    text-transform:uppercase;
+    padding-left:20px;
+    padding-right:20px;
+    display:inline-block;
+}
+/*Fin Home*/
+
+/*Otras actividades*/
+.margen20{
+    margin-right:17px;   
+}
+.otros .bloque300{
+    margin-bottom:0px;
+}
+
+.otros .bloque300 .esquinaproja{
+    padding-left: 12px;
+    padding-right: 10px;
+}
+
+.otros .bloque300 h1{
+    font-size:23px;
+}
+/*Otras actividades*/
+/*Menu inferior*/
+.menuinferior{
+    margin-bottom:40px;
+    margin-top:20px;
+	position:relative;
+	display:inline-block;
+}
+ul.menuinferior {
+    width:940px;
+    display:block;
+    font-size:11px;
+    line-height:15px;
+    margin-top:22px;
+    color:#000;
+}
+ul.menuinferior  li{
+    width:174px;
+    margin-left:10px;
+    display:inline-block;
+    vertical-align:top;
+	float:left;
+	
+}
+ul.menuinferior  li a {
+/*    background:url('images/puntosgris.png') repeat-x;*/
+    color:#000;
+    width:174px;	
+    border-bottom: dotted 1px #707070;
+    background-position:bottom left;
+    min-height:20px;
+	padding-bottom:3px;
+    display:inline-block;
+}
+
+ul.menuinferior  li ul{
+    width:174px;
+    margin-top:0px;
+}
+
+ul.menuinferior  li ul.sub-menu li a{
+	border: 0px;
+    padding-bottom:0px;
+    color:#0062ae;
+}
+
+ul.menuinferior  li ul.sub-menu li a:hover, ul.menuinferior  li ul.sub-menu li a:active, ul.menuinferior  li ul.sub-menu li a:focus{
+	font-weight:bold;
+    text-decoration:underline;
+}
+
+ul.menuinferior  li ul.sub-menu li a:hover::after, ul.menuinferior  li ul.sub-menu li a:active::after, ul.menuinferior  li ul.sub-menu li a:focus::after{
+    content: "\03E";
+}
+
+ul.menuinferior  li ul.sub-menu li.vertodo a:hover::after, ul.menuinferior  li ul.sub-menu li a:active::after, ul.menuinferior  li ul.sub-menu li a:focus::after{
+    content: "";
+}
+
+
+
+ul.menuinferior  li ul.sub-menu li{
+    width:174px;
+    margin-top:5px;
+    margin-left:0px;
+/*    background:url('images/puntosgris.png') repeat-x;*/
+	border-bottom: dotted 1px #707070;
+    background-position:bottom left;
+    min-height:20px;
+	padding-bottom:5px;
+    color:#0062ae;
+}
+/*Fin menu inferior*/
+
+/*Pie*/
+.footer {
+	height:220px;
+}
+.iniciativa{
+    height:40px;
+    background-color:#4891dc;
+}
+.iniciativa .grupotop .fltlft {
+    line-height:40px;
+    font-size:15px;
+}
+.iniciativa .grupotop .fltrt {
+    line-height:40px;
+}
+.iniciativa a{
+    color:#fff;
+}
+
+.iniciativa a:hover, .iniciativa a:active, .iniciativa a:focus{
+    color:#fff;
+    border-bottom: solid 2px #fff;
+}
+
+.final{
+    background-color:#0062ae;
+    height:220px;
+}
+.grupofinal{
+    width:940px;
+    margin:0 auto;
+    color:#EDEDED;
+    font-size:11px;
+    padding-top:30px;
+}
+.grupofinal .texto {
+    width:50%;
+}
+.grupofinal p{
+    padding-top:20px;
+    margin-bottom:0px;
+    line-height:15px;
+}
+#ibercajablanco{
+	width:119px;
+	height:38px;
+    margin-right:10px;
+    /*margin-bottom:30px;*/
+}
+.logotipos{
+    width:50%;
+    text-align:right;
+    margin-top:4px;
+}
+.logotipos .espacio{
+    height:100px;
+}
+.logotipos img{
+/*    display:inline-block;*/
+    margin-left:20px;
+	margin-top:31px;
+}
+.logotipos .enlaces{
+	text-align:left;
+	display:block;
+	margin-top: 50px;
+	font-size:11px;
+}
+.logotipos .enlaces span{
+	margin-left: 12px;
+	margin-right: 12px;
+}
+.grupofinal a:link {
+	color: #e5eff7;
+	text-decoration:none; 
+}
+.grupofinal a:visited {
+	color: #e5eff7;
+	text-decoration: none;
+}
+.grupofinal a:hover, .grupofinal a:active, .grupofinal a:focus { 
+	text-decoration: underline;
+}
+
+/*Fin Pie*/
+.fltrt {  
+	float: right;
+}
+.fltlft { 
+	float: left;
+}
+.clearfloat { 
+	clear:both;
+	height:0;
+	font-size: 1px;
+	line-height: 0px;
+}
+.esquinaazul{
+    /*background:url('images/esquinaazul.png') no-repeat;*/
+    background-position:left bottom;
+    margin-bottom:20px; 
+}
+.esquinapazul{
+    /*background:url('images/esquinapazul.png') no-repeat;*/
+    background-position:left bottom;
+}
+.esquinaroja{
+    /*background:url('images/esquinaroja.png') no-repeat;*/
+    background-position:right top;
+}
+.esquinaproja{
+    /*background:url('images/esquinaproja.png') no-repeat;*/
+    background-position:right top;
+}
+.textoazul{
+    color:#0062ae;
+}
+.textorojo{
+    color:#e52726;
+}
+
+.texto13{
+    font-size:13px;
+    color:#000;
+}
+
+.texto12{
+    font-size:12px;
+    line-height:15px;
+}
+
+.enlace {
+    font-size:10px;
+    color:#000;
+    font-weight:bold;
+    color:#0062ae;
+}
+
+a.enlacegris {
+    font-size:11px;
+    color:#707070;
+    font-weight:bold; 
+}
+
+a.enlacegris:hover, a.enlacegris:focus, a.enlacegris:active {
+    text-decoration:underline;
+}
+
+a.boton{
+    min-width: 60px;
+    margin-top:20px;
+    margin-bottom:20px;
+    color:#fff;
+    width:auto;
+    background-color:#4891dc;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    font-family: "IbercajaBold";
+    text-transform:uppercase;
+    display:inline-block;
+    padding-left:30px;
+    padding-right:30px;
+}
+
+/*Single*/
+.instrucciones{
+    line-height:35px;
+}
+.instrucciones a {
+    font-size:11px;
+}
+
+/*#fordidactico{
+    width:945px;
+    position:relative;
+    top:0px;
+    left:-5px;
+}*/
+/*Contenidos y niveles educativos */
+ul.ul_fordidactico{
+    width:940px;
+    list-style-type:none;
+    display:inline-block;
+}
+ul.ul_fordidactico li{
+    padding-top:20px;
+    width:940px;
+    min-height:50px;
+    border: 1px solid #c9c9c9;
+    -webkit-box-shadow: 1px 2px 0px 0px rgba(0,0,0,0.1);
+    -moz-box-shadow: 1px 2px 0px 0px rgba(0,0,0,0.1);
+    box-shadow: 1px 2px 0px 0px rgba(0,0,0,0.1);
+    margin-bottom:20px;
+	float:left;
+}
+
+ul.ul_fordidactico li .cintillo{
+    width:925px;
+    height:30px;
+    background-image: url("images/cintillo.png");
+    background-position: left top;
+    background-repeat: no-repeat;
+    left: -5px;
+    position: relative;
+    top: 0;
+    margin-bottom:10px;
+}
+
+ul.ul_fordidactico li .cintillo p{
+    background-color:#898989;
+    height:25px;
+    padding-left:20px;
+}
+
+ul.ul_fordidactico li .cintillo p a.menuleft{
+    color:#fff;
+    text-transform:uppercase;
+    font-family:"IbercajaBold";
+    font-size:15px;
+    line-height:25px;
+    float:left;
+}
+
+
+ul.ul_fordidactico li .cintillo p a.menuleft:hover, ul.ul_fordidactico li .cintillo p a.menuleft:active, ul.ul_fordidactico li .cintillo p a.menuleft:active:focus{
+    text-decoration:underline;
+}
+
+ul.ul_fordidactico li .cintillo p a.a_vermas{
+    float:right;
+    color:#fff;
+    font-weight:bold;
+    font-size:11px;
+    padding-right:10px;
+    line-height:25px;
+}
+
+ul.ul_fordidactico li .cintillo p a.a_vermas:hover, ul.ul_fordidactico li .cintillo p a.a_vermas:active, ul.ul_fordidactico li .cintillo p a.a_vermas:focus{
+    text-decoration:underline;
+}
+
+ul.ul_fordidactico li ul.sub-menu{
+    width:208px;
+    display:inline;
+    vertical-align:top;
+    padding-bottom:20px;
+	list-style-type:none;
+}
+ul.ul_fordidactico li ul.sub-menu li{
+    width:900px;
+    border:0px;
+    box-shadow:none;
+    display:inline-block;
+    margin-bottom:0px;
+    padding-left:20px;
+    padding-top:0px;
+	/*float:left;*/
+}
+ul.ul_fordidactico li ul.sub-menu li p.vermas{
+    text-transform:uppercase;
+    font-family:"IbercajaBold";
+    color:#707070;
+    font-size:13px;
+    border-bottom:1px dotted #c9c9c9;
+    line-height:30px;
+    margin-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+ul.ul_fordidactico li ul.sub-menu li ul{
+    padding-left:0px;
+    width:100%;
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+    list-style-position: inside;
+}
+ul.ul_fordidactico li ul.sub-menu li ul li{
+    padding-left:0px;
+    display:inline-block;
+    width:50%;
+    padding-top:0px;
+    min-height:0px;
+
+}
+
+ul.ul_fordidactico li ul.sub-menu li ul li a{
+    font-family:Verdana;
+    font-size:13px;
+    color:#0062ae;
+    text-transform:none;
+}
+
+ul.ul_fordidactico li ul.sub-menu li ul li a:hover, ul.ul_fordidactico li ul.sub-menu li ul li a:active, ul.ul_fordidactico li ul.sub-menu li ul li a:focus{
+    font-weight:bold;
+    text-decoration:underline;
+}
+/*Fin Contenidos y niveles educativos */
+
+/*Actividades */
+ul.ul_forcontenido, ul.ul_forcontenidoa{
+    width:940px;
+    list-style-type:none;
+    display:inline-block;
+}
+ul.ul_forcontenido li, ul.ul_forcontenidoa li{
+    padding-top:20px;
+    width:940px;
+    min-height:50px;
+    border: 1px solid #c9c9c9;
+    -webkit-box-shadow: 1px 2px 0px 0px rgba(0,0,0,0.1);
+    -moz-box-shadow: 1px 2px 0px 0px rgba(0,0,0,0.1);
+    box-shadow: 1px 2px 0px 0px rgba(0,0,0,0.1);
+    margin-bottom:20px;
+	float:left;
+	display:inline;
+}
+
+ul.ul_forcontenido li .cintillo, ul.ul_forcontenidoa li .cintillo{
+    width:925px;
+    height:30px;
+    background-image: url("images/cintillo.png");
+    background-position: left top;
+    background-repeat: no-repeat;
+    left: -5px;
+    position: relative;
+    top: 0;
+    margin-bottom:10px;
+}
+
+ul.ul_forcontenido li .cintillo p, ul.ul_forcontenidoa li .cintillo p{
+    background-color:#898989;
+    height:25px;
+    padding-left:20px;
+}
+
+ul.ul_forcontenido li .cintillo p a.menuleft, ul.ul_forcontenidoa li .cintillo p a.menuleft{
+    color:#fff;
+    text-transform:uppercase;
+    font-family:"IbercajaBold";
+    font-size:15px;
+    line-height:25px;
+    float:left;
+}
+
+ul.ul_forcontenido li .cintillo p span.menuleft, ul.ul_forcontenidoa li .cintillo p span.menuleft{
+    color:#fff;
+    text-transform:uppercase;
+    font-family:"IbercajaBold";
+    font-size:15px;
+    line-height:25px;
+    float:left;
+}
+
+
+ul.ul_forcontenido li .cintillo p a.menuleft:hover, ul.ul_forcontenido li .cintillo p a.menuleft:active, ul.ul_forcontenido li .cintillo p a.menuleft:active:focus,
+ul.ul_forcontenidoa li .cintillo p a.menuleft:hover, ul.ul_forcontenidoa li .cintillo p a.menuleft:active, ul.ul_forcontenidoa li .cintillo p a.menuleft:active:focus{
+    text-decoration:underline;
+}
+
+ul.ul_forcontenido li .cintillo p a.a_vermas, ul.ul_forcontenidoa li .cintillo p a.a_vermas{
+    float:right;
+    color:#fff;
+    font-weight:bold;
+    font-size:11px;
+    padding-right:10px;
+    line-height:25px;
+}
+
+ul.ul_forcontenido li .cintillo p a.a_vermas:hover, ul.ul_forcontenido li .cintillo p a.a_vermas:active, ul.ul_forcontenido li .cintillo p a.a_vermas:focus,
+ul.ul_forcontenidoa li .cintillo p a.a_vermas:hover, ul.ul_forcontenidoa li .cintillo p a.a_vermas:active, ul.ul_forcontenidoa li .cintillo p a.a_vermas:focus{
+    text-decoration:underline;
+}
+
+ul.ul_forcontenido li ul.sub-menu{
+    width:439px;
+    display:inline;
+    vertical-align:top;
+    padding-bottom:20px;
+}
+ul.ul_forcontenido li ul.sub-menu li{
+    width:439px;
+    border:0px;
+    box-shadow:none;
+    display:inline-block;
+    margin-bottom:0px;
+    padding-left:20px;
+    padding-top:0px;
+	list-style-type:none;
+	float:left;
+}
+ul.ul_forcontenido li ul.sub-menu li p.vermas{
+    text-transform:none;
+    font-family:Verdana;
+    color:#707070;
+    font-size:13px;
+    border-bottom:1px dotted #c9c9c9;
+    border-top:1px dotted #c9c9c9;
+    line-height:30px;
+}
+
+ul.ul_forcontenido li ul.sub-menu li p.vermas a:hover, ul.ul_forcontenido li ul.sub-menu li p.vermas a:active, ul.ul_forcontenido li ul.sub-menu li p.vermas a:focus{
+    font-weight:bold;
+	text-decoration:underline;
+}
+
+
+ul.ul_forcontenidoa li ul.sub-menu{
+    width:899px;
+    display:inline;
+    vertical-align:top;
+    padding-bottom:20px;
+    
+}
+ul.ul_forcontenidoa li ul.sub-menu li{
+    width:899px;
+    border:0px;
+    box-shadow:none;
+    display:inline-block;
+    margin-bottom:0px;
+    padding-left:20px;
+    padding-top:0px;
+    padding-bottom:0px;
+    height:80px;
+}
+ul.ul_forcontenidoa li ul.sub-menu li p.vermas{
+    text-transform:none;
+    font-family:Verdana;
+    color:#707070;
+    font-size:14px;
+    font-weight:bold;
+    border-top:1px dotted #c9c9c9;
+    line-height:30px;
+}
+
+ul.ul_forcontenidoa li ul.sub-menu li p.vermas a:hover, ul.ul_forcontenidoa li ul.sub-menu li p.vermas a:active, ul.ul_forcontenidoa li ul.sub-menu li p.vermas a:focus{
+    font-weight:bold;
+	text-decoration:underline;
+}
+
+ul.ul_forcontenidoa li {
+    padding-bottom:10px;
+}
+/*Fin Actividades */
+/*Concursos*/
+ul.ul_forconcursos, ul.ul_forconcursosa{
+    width:940px;
+    list-style-type:none;
+    display:inline-block;
+}
+ul.ul_forconcursos li, ul.ul_forconcursosa li{
+    padding-top:20px;
+    width:940px;
+    min-height:50px;
+    border: 1px solid #c9c9c9;
+    -webkit-box-shadow: 1px 2px 0px 0px rgba(0,0,0,0.1);
+    -moz-box-shadow: 1px 2px 0px 0px rgba(0,0,0,0.1);
+    box-shadow: 1px 2px 0px 0px rgba(0,0,0,0.1);
+    margin-bottom:20px;
+	float:left;
+	display:inline;
+}
+
+ul.ul_forconcursos li .cintillo, ul.ul_forconcursosa li .cintillo{
+    width:925px;
+    height:30px;
+    background-image: url("images/cintillo.png");
+    background-position: left top;
+    background-repeat: no-repeat;
+    left: -5px;
+    position: relative;
+    top: 0;
+    margin-bottom:10px;
+}
+
+ul.ul_forconcursos li .cintillo p, ul.ul_forconcursosa li .cintillo p{
+    background-color:#898989;
+    height:25px;
+    padding-left:20px;
+}
+
+ul.ul_forconcursos .cintillo p a.menuleft, ul.ul_forconcursosa li .cintillo p a.menuleft{
+    color:#fff;
+    text-transform:uppercase;
+    font-family:"IbercajaBold";
+    font-size:15px;
+    line-height:25px;
+    float:left;
+}
+
+ul.ul_forconcursos li .cintillo p span.menuleft, ul.ul_forconcursosa li .cintillo p span.menuleft{
+    color:#fff;
+    text-transform:uppercase;
+    font-family:"IbercajaBold";
+    font-size:15px;
+    line-height:25px;
+    float:left;
+}
+
+ul.ul_forconcursos .bloqueenlaces{
+    padding-top:15px;
+    padding-bottom:10px;
+    font-size:14px;
+}
+
+ul.ul_forconcursos .bloqueenlaces span{
+    padding-right:10px;
+    padding-left:10px;
+}
+
+ul.ul_forconcursos a:hover, ul.ul_forconcursos a:focus, ul.ul_forconcursos a:active {
+    text-decoration:underline;
+    font-weight:bold;
+}
+
+ul.ul_forconcursos li .cintillo p a.menuleft{
+    text-transform:none;
+    font-size:14px;
+    font-weight:bold;
+    line-height:25px;
+    float:left;
+}
+
+ul.ul_forconcursos li .cintillo p a.menuleft:hover, ul.ul_forconcursos li .cintillo p a.menuleft:active, ul.ul_forconcursos li .cintillo p a.menuleft:active:focus{
+    text-decoration:underline;
+}
+
+ul.ul_forconcursos li ul.sub-menu li {
+    width: 439px;
+    border: 0px;
+    box-shadow: none;
+    display: inline-block;
+    margin-bottom: 0px;
+    padding-left: 20px;
+    padding-top: 0px;
+    list-style-type: none;
+    float: left;
+}
+
+ul.ul_forconcursos li ul.sub-menu li p.vermas {
+    text-transform: none;
+    font-family: Verdana;
+    color: #707070;
+    font-size: 13px;
+    border-bottom: 1px dotted #c9c9c9;
+    border-top: 1px dotted #c9c9c9;
+    line-height: 30px;
+}
+
+/*Fin Concursos*/
+/*Histórico*/
+.bloque, .bloquepeque{
+    padding-top:20px;
+    width:940px;
+    min-height:50px;
+    border: 1px solid #c9c9c9;
+    -webkit-box-shadow: 1px 2px 0px 0px rgba(0,0,0,0.1);
+    -moz-box-shadow: 1px 2px 0px 0px rgba(0,0,0,0.1);
+    box-shadow: 1px 2px 0px 0px rgba(0,0,0,0.1);
+    margin-bottom:20px;
+    padding-bottom:20px;
+}
+
+.bloque .cintillo, .bloquepeque .cintillo{
+    width:925px;
+    height:30px;
+    background-image: url("images/cintillo.png");
+    background-position: left top;
+    background-repeat: no-repeat;
+    left: -5px;
+    position: relative;
+    top: 0;
+    margin-bottom:10px;
+}
+
+.bloquepeque {
+    width:896px;
+}
+
+    .bloquepeque .cintillo {
+        width:881px;
+    }
+
+    .bloquepeque ul li {
+        /*border: 0 none;*/
+        box-shadow: none;
+        display: inline-block;
+        font-size: 12px;
+        list-style-type: none;
+        padding-left: 0px;
+        padding-top:2px;
+        width: 270px;
+        border-top:1px dotted #c9c9c9;
+        border-bottom:1px dotted #c9c9c9;
+        margin-left:5px;
+        margin-right:10px;
+        margin-bottom:10px;
+    }
+    .bloquepeque ul li div.fltlft{
+        width: 35px;
+    }
+    .bloquepeque ul li div.fltrt{
+        width: 235px;
+    }
+        .bloquepeque ul li a:hover, .bloquepeque ul li:active, .bloquepeque ul li:focus {
+            text-decoration:underline;
+        }
+
+.bloque .cintillo .titulo, .bloquepeque .cintillo .titulo{
+    background-color:#898989;
+    height:25px;
+    padding-left:20px;
+    color:#fff;
+    font-family:"IbercajaBold";
+    text-transform:uppercase;
+    line-height:25px;
+    font-size:15px;
+}
+.bloque .fila ul{
+    width:284px;
+    display:inline;
+    vertical-align:top;
+    padding-bottom:20px;
+}
+.bloque .fila ul li{
+    width:284px;
+    border:0px;
+    box-shadow:none;
+    display:inline-block;
+    margin-bottom:0px;
+    padding-left:20px;
+    padding-top:0px;
+    font-family:"IbercajaBold";
+    text-transform:uppercase;
+    color:#000;
+    font-size:13px;
+	list-style-type:none;
+
+}
+.bloque .fila ul li ul li {
+    border-bottom:1px dotted #c9c9c9;
+    border-top:1px dotted #c9c9c9;
+    line-height:30px;
+    padding-left:0px;
+
+}
+
+.bloque .fila ul li ul li a{
+    text-transform:none;
+    font-family:Verdana;
+    color:#000;
+    font-size:13px;
+}
+
+.bloque .resultado ul li ul li a{
+    text-transform:none;
+    font-family:Verdana;
+    color:#0062ae;
+    font-size:13px;
+}
+
+.bloque .fila ul li ul li a:hover, .bloque .fila ul li ul li a:focus, .bloque .fila ul li ul li a:active{
+    font-weight:bold;
+    text-decoration:underline;
+}
+
+
+/*Fin Histórico*/
+
+/*Visor de contenidos*/
+#contenido {
+    border: 1px solid #c9c9c9;
+    -webkit-box-shadow: 1px 2px 0px 0px rgba(0,0,0,0.1);
+    -moz-box-shadow: 1px 2px 0px 0px rgba(0,0,0,0.1);
+    box-shadow: 1px 2px 0px 0px rgba(0,0,0,0.1);
+    padding-left:20px;
+    padding-top:20px;
+    padding-bottom:20px;
+    padding-right:20px;
+}
+
+#contenido p 
+{
+        padding-bottom:10px;
+}
+
+#contenido img
+{
+    padding-left: 20px;
+}
+
+#ficha {
+    border-left: 1px solid #c9c9c9;
+    /*-webkit-box-shadow: 1px 2px 0px 0px rgba(0,0,0,0.1);
+    -moz-box-shadow: 1px 2px 0px 0px rgba(0,0,0,0.1);
+    box-shadow: 1px 2px 0px 0px rgba(0,0,0,0.1);*/
+	padding-bottom:20px;
+}
+    #ficha ul li.apartado {
+            width:210px;
+            margin-bottom:10px;
+			list-style-type:none;
+
+    }
+    #ficha ul li.apartado div {
+            width:210px;
+            height:auto;
+            background-image: url("images/cintilloficha.png");
+            background-position: left bottom;
+            background-repeat: no-repeat;
+            left: -5px;
+            position: relative;
+            top:0;
+            padding-bottom:5px;
+    }
+	#ficha ul {
+		display:inline-block;
+	}
+	#ficha ul li.apartado p{
+    	font-family:"IbercajaBold";
+		font-size:13px;
+		width:200px;
+		padding-left:10px;
+		background-color:#898989;
+		color:#FFF;
+		line-height:20px;
+		min-height:20px;
+		text-transform:uppercase;
+    }
+	#ficha ul li.titulo {
+
+		list-style-type:none;
+		margin-left:10px;
+	    border-bottom:1px dotted #c9c9c9;
+		width:200px;    	
+
+	    font-size:12px;
+
+   		
+	}
+	#ficha ul li.titulo a{
+		line-height:30px;
+		color:#707070;
+	}
+	
+	#ficha ul li.titulo a:hover, #ficha ul li.titulo a:focus, #ficha ul li.titulo a:active{
+		text-decoration:underline;
+		font-weight:bold;
+	}
+    #ficha .fltlft {
+        width:210px;
+    }
+	#ficha .fltrt {
+        width:720px;
+        margin-top:0px;
+        padding-top:10px;
+        padding-bottom:10px;
+    }
+        #ficha .fltrt .ul_imagen {
+            padding-left:10px;
+            list-style-type:none;
+            min-height:405px;
+        }
+#numero {
+    color:#e5eff7;
+    font-size:2px;
+}
+.alignright {
+    float: right;
+}
+.alignleft {
+    float: left;
+}
+.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.concurso img.alignright {
+    padding-left:20px;
+    padding-bottom:20px;
+}
+
+.concurso img.alignleft {
+    padding-right:20px;
+    padding-bottom:20px;
+}
+
+.concurso img.aligncenter {
+    
+    padding-bottom:20px;
+}
+
+
+#acceder:hover, #acceder:focus, #acceder:active {
+    text-decoration:underline;
+    font-weight:bold;
+}
+/*Fin Visor de contenidos*/
+/*Detalle*/
+.angtitulo {
+    font-size:34px;
+    color:#c9c9c9;
+    padding-left:5px;
+    padding-right:5px;
+}
+.detalle .fltlft {
+    width:614px;
+}
+.detalle .fltlft h3, 
+.concurso h3{
+    font-family:"IbercajaBold";
+    font-size:15px;
+    text-transform:uppercase;
+    padding-top:20px;
+    padding-bottom:10px;
+}
+.detalle .fltlft p, .concurso p{
+    font-size:14px;
+}
+
+.concurso p{
+    line-height:143%;
+}
+
+
+
+
+
+
+.detalle .fltlft ul, .concurso ul{
+    padding-left:20px;
+}
+
+
+.detalle .fltrt {
+    width:300px;
+}
+.detalle .bloqueazul {
+    margin-top:0px;
+    margin-bottom:20px;
+}
+    .detalle .bloqueazul .boton {
+        line-height:40px;
+        width:200px;
+        text-align:center;
+        margin-bottom:0px;
+    }
+    .detalle .bloqueazul .fila {
+        padding-bottom:20px;
+    }
+    .detalle .bloqueazul a:hover, .detalle .bloqueazul a:active, .detalle .bloqueazul a:focus {
+        text-decoration:underline;
+        font-weight:bold;
+    }
+.detalle .bloqueazul {
+   /* padding-left:20px;
+    padding-right:20px;*/
+}
+.detalle .bloqueazul .fila{
+    padding-left:20px;
+    padding-right:20px;
+}
+.detalle .bloqueazul .cintillo{
+    background-image: url("images/cintillo.png");
+    background-position: left -5px;
+    background-repeat: no-repeat;
+    height: 25px;
+    left: -5px;
+    position: relative;
+    top: 0;
+    width: 210px;
+    margin-top:20px;
+    margin-bottom:15px;
+}
+.detalle .bloqueazul .mapa{
+    border: 1px solid #c9c9c9;
+    margin-top:20px;
+}
+
+    .detalle .bloqueazul .cintillo .titulo {
+        font-family:"IbercajaBold";
+        font-size:13px;
+        color:#fff;
+        line-height:20px;
+        background-color:#707070;
+        padding-left:20px;
+        text-transform:uppercase;
+    }
+.detalle .fila a.boton {
+    height:40px;
+    line-height:40px;
+
+    font-size: 12px;
+    padding-right: 5px;
+    padding-left: 5px;
+    width: 248px;
+}
+
+#globo1 {
+    background: url("images/globo.png") no-repeat 0 0 transparent;
+    /*box-shadow: 7px 8px 13px -8px;*/
+    left: -100px;
+    position: absolute;
+    top: -100px;
+    width: 380px;
+    z-index:9;
+}
+    #globo1 .globo {
+        background-color:#fbf7d7;
+        margin-top:12px;
+        border: 1px solid #c9c9c9;
+        -webkit-box-shadow: 1px 2px 0px 0px rgba(0,0,0,0.1);
+        -moz-box-shadow: 1px 2px 0px 0px rgba(0,0,0,0.1);
+        box-shadow: 1px 2px 0px 0px rgba(0,0,0,0.1);
+        border-top:0px;
+        padding:20px;
+        line-height:125%;
+    }
+        #globo1 .globo ul {
+            margin-left:20px;
+        }
+        #globo1 .globo p {
+            padding-bottom:10px;
+        }
+        #globo1 .globo a {
+            width:auto;
+            display:inline-block;
+            font-size:10px;
+            font-weight:bold;
+        }
+.concurso .enlaces {
+    padding-top:10px;
+    padding-bottom:10px;
+    border-top:1px dotted #c9c9c9;
+    border-bottom:1px dotted #c9c9c9;
+    margin-top:20px;
+    margin-bottom:20px;
+}
+    .concurso .enlaces span {
+        padding-left:5px;
+        padding-right:5px;
+    }
+.concurso .enlaces a {
+    line-height:20px;
+    font-size:14px;
+}
+.concurso .enlaces a:hover, .concurso .enlaces a:focus, .concurso .enlaces a:active {
+    font-weight:bold;
+    text-decoration:underline;
+}
+
+.concurso .bloqueazul {
+    padding:20px;
+	width:96%;
+}
+    .concurso .bloqueazul p {
+        font-size:12px;
+    }
+
+
+.filapremio
+{
+	vertical-align: top;
+	display: inline-block;
+	width:100%;
+}
+
+.concurso .premiados
+{
+	width:40%;
+	margin: 2%;
+	margin-top: 5%;
+	margin-bottom: 5%;
+	clear: both;
+	padding: 15px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+	.concurso .premiados.derecha
+	{
+		float:right;
+	}
+
+	.concurso .premiados .categoria
+	{
+		font-family:"IbercajaBold";
+		font-size: 20px;
+		color:#0062ae;
+		margin-bottom: 15px;
+	}
+
+	.concurso .premiados .imagen
+	{
+		width:100%;
+	}
+
+	.concurso .premiados .imagen .img-responsive
+	{
+		max-width:100%;
+		height:auto;
+	}
+
+	.concurso .premiados .nombre a
+	{
+		width:100%;
+		font-family:"IbercajaBold";
+		font-size:20px;
+		line-height: 26px;
+		margin-top: 5px;
+		margin-bottom: 10px;
+		color: #6f6c6c;
+		text-decoration: underline;
+		display: inline-block;
+	}	
+
+	.concurso .premiados .fila
+	{
+		width:100%;
+		display: inline-block;
+	}	
+
+		.concurso .premiados .fila .campo
+		{
+			width:25%;
+			float:left;
+			font-family:"IbercajaBold";
+			font-size: 15px;
+			line-height: 25px;
+		}	
+
+
+		.concurso .premiados .fila .texto
+		{
+			width:75%;
+			float:right;
+			text-align: left;
+			font-family:"Verdana";
+			font-size: 15px;
+			line-height: 25px;
+		}	
+
+
+
+/*Fin Detalle*/
+.descripcion{
+    width:809px;
+}
+
+.descripcion p{
+    font-size:14px;
+    padding-bottom:25px;
+}
+.texto11 {
+    font-size:11px;
+}
+/*Fin Single*/
+/*Formulario*/
+.bloqueazul {
+    border: 1px solid #c9c9c9;
+    -webkit-box-shadow: 1px 2px 0px 0px rgba(0,0,0,0.1);
+    -moz-box-shadow: 1px 2px 0px 0px rgba(0,0,0,0.1);
+    box-shadow: 1px 2px 0px 0px rgba(0,0,0,0.1);
+    background-color:#e5eff7;
+    min-height:100px;
+    margin-top:10px;
+	width:100%;
+	float:left;
+}
+.filabuscar {
+    height:40px;
+    margin-top:30px;
+    padding-left:20px;
+}
+    .filabuscar .etiqueta {
+        color:#707070;
+        font-size:14px;
+        line-height:40px;
+        padding-right:20px;
+    }
+    .filabuscar input {
+        height:40px;
+        border-radius: 3px;
+        -moz-border-radius: 3px;
+        -webkit-border-radius: 3px;
+        border:1px solid #c9c9c9;
+        width:550px;
+        margin-right:10px;
+    }
+.bloqueazul button {
+    min-width: 140px;
+    color:#fff;
+    width:auto;
+    height:42px;
+    background-color:#4891dc;
+    border:0px;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    font-family: "IbercajaBold";
+    font-size:11px;
+    text-transform:uppercase;
+    display:inline-block;
+    padding-left:30px;
+    padding-right:30px;
+}
+
+form > p > input.wpcf7-submit 
+{
+	min-width: 140px;
+	color: #fff;
+	width: auto;
+	height: 42px;
+	background-color: #4891dc;
+	border: 0px;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	font-family: "IbercajaBold";
+	font-size: 11px;
+	text-transform: uppercase;
+	display: inline-block;
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+form > p > input.wpcf7-submit:hover
+{
+	background-color:#0062AE;
+}
+
+.detalle .acceso .fila {
+    padding-left:30px;
+    padding-right:30px;
+    padding-bottom:10px;
+}
+
+.detalle .acceso .etiqueta {
+    line-height:25px;
+}
+
+.etiqueta {
+    font-size:14px;
+    line-height:30px;
+}
+
+.campo input, .campo select {
+    height:40px;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border:1px solid #c9c9c9;
+    width:540px;
+}
+
+.campo input.peq {
+    height:40px;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border:1px solid #c9c9c9;
+    width:300px;
+}
+
+.detalle .acceso input {
+        height:30px;
+        margin-right:20px;
+        width:80%;
+}
+.detalle .acceso button.boton {
+        height:30px;
+        line-height:30px;
+        width:100px;
+}
+
+button {
+    cursor:pointer;
+}
+/*.detalle .acceso button.boton:active, .detalle .acceso button.boton:hover, .detalle .acceso button.boton:focus {*/
+button.boton:active, button.boton:hover, button.boton:focus{
+        background-color:#0062ae;
+}
+    button.boton:disabled {
+        background-color:#707070;
+    }
+.mensaje_error {
+    font-size:12px;
+    color:#e52726;
+}
+.filaformulario {
+    padding-top:32px;
+    padding-left:80px;
+    padding-bottom:80px;
+}
+    .filaformulario .etiqueta {
+        font-size:14px;
+    }
+    .filaformulario .campo {
+        padding-bottom:20px;
+    }
+    .filaformulario .campoboton {
+        padding-top:40px;
+        margin-right:70px;
+    }
+    .filaformulario input[type=checkbox] {
+         visibility: hidden;
+    }
+    .filaformulario .campocheck {
+        line-height:20px;
+	visibility: inherit !important;
+    }
+    .filaformulario .campocheck_no {
+	    width: 20px;
+	    height: 20px;
+        cursor:pointer;
+        position: relative;
+	    left: -24px;
+        font-size:20px;
+    }
+    .filaformulario .campocheck_si {
+	    width: 20px;
+	    height: 20px;
+        cursor:pointer;
+        position: relative;
+	    left: -24px;
+        font-size:20px;
+    }
+.campoboton button.boton {
+    width:300px;
+}
+
+.campoboton button.peq {
+    width:200px;
+}
+
+
+.cancel {
+    width:200px;
+    margin-right:320px;
+}
+.cancel button.boton{
+    width:200px;
+
+}
+
+/*
+.filaformulario .mensaje {
+    color: #898989;
+    font-style: italic;
+    left: -530px;
+    position: relative;
+}
+
+.filaformulario .mensajepeq {
+    color: #898989;
+    font-style: italic;
+    left: -290px;
+    position: relative;
+}
+*/
+.filaformulario .mensaje {
+    color: #898989;
+    font-style: italic;
+    left: 19px;
+    position: relative;
+    display:inline-block;
+    top:-30px;
+    width:800px
+}
+
+.filaformulario .mensajepeq {
+    color: #898989;
+    font-style: italic;
+    left: 19px;
+    position: relative;
+    display:inline-block;
+    top:-30px;
+    width:800px
+}
+
+textarea {
+    background-color: transparent;
+    border: 1px solid #c9c9c9;
+    font-family: verdana;
+    font-size: 12px;
+    height: 137px;
+    line-height: 167%;
+    width: 540px;
+}
+/*Fin Formulario*/
+/*404*/
+
+.filacuerpo .icono  {
+    font-size:125px;
+}
+.filacuerpo .filamensaje {
+    background-color: #fbf7d7;
+    border: 1px solid #c9c9c9;
+    box-shadow: 1px 2px 0 0 rgba(0, 0, 0, 0.1);
+    color: #000;
+    min-height: 80px;
+    line-height: 40px;
+    text-align: center;
+}
+.error h1{
+    font-family:"IbercajaBold";
+    font-size:30px;
+    color:#707070;
+}
+.error p {
+    line-height:200%;
+    font-size:14px;
+    padding-top:30px;
+    padding-bottom:30px;
+}
+.error a:hover, .error a:active, .error a:focus {
+    text-decoration:underline;
+    font-weight:bold;
+}
+.centrar {
+    text-align:center;
+}
+.texto14 {
+    font-size:14px;
+    line-height:20px;
+}
+/*Fin 404*/
+.zonainterna ul{
+    padding-left:20px;
+    font-size:14px;
+}
+.zonainterna p {
+    font-size:14px;
+    line-height:156%;
+}
+table td.etiqueta h3 {
+    font-family:"IbercajaBold";
+    font-size:14px;
+    text-transform:uppercase;
+}
+table {
+    /*width:940px;*/
+    width:100%;
+    border:1px solid #c9c9c9;
+    -webkit-box-shadow: 1px 2px 0px 0px rgba(0,0,0,0.1);
+    -moz-box-shadow: 1px 2px 0px 0px rgba(0,0,0,0.1);
+    box-shadow: 1px 2px 0px 0px rgba(0,0,0,0.1);
+
+}
+    table tr {
+       border:0px solid #e5eff7;
+       height:25px;
+    }
+
+
+.bloque300:focus, .bloque300:active, .bloque300:hover,
+.bloque1:focus, .bloque1:active, .bloque1:hover,
+.unbloque:focus, .unbloque:active, .unbloque:hover,
+.unbloquesin:focus, .unbloquesin:active, .unbloquesin:hover,
+.dosbloques:focus, .dosbloques:active, .dosbloques:hover {
+    border-color:#4891dc;
+}
+
+/*Ley de cookies*/
+/*
+#obt_ga_banner{
+	padding-left: 0;
+	padding-right: 0;
+	padding-top: 0;
+	padding-bottom: 0;
+	background-color: #000;
+    opacity: 0.85;
+    margin: 0 auto;
+    z-index: 10;
+    width:100%;
+}
+
+#obt_ga_contenido h2{
+	color: #fff;
+	margin-top: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-bottom: 5px;
+	clear: both;
+    font-size:12px;
+    text-transform:uppercase;
+    font-weight:bold;
+}
+#obt_ga_contenido p{
+	color: #fff;
+	margin: 0px;
+	clear: both;
+	font-size: 12px;
+}
+#obt_ga_contenido a, #obt_ga_contenido a:hover, #obt_ga_contenido a:active, #obt_ga_contenido a:focus{
+	color: #fff;
+    text-decoration:underline;
+    font-weight:bold;
+}
+
+#obt_ga_contenido{
+	float:none;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    width: 940px;
+}
+
+#obt_ga_boton{
+	color: #fff;
+    cursor: pointer;
+    float: none;
+    font-size: 14px;
+    font-weight: bold;
+    height: 20px;
+    margin: 0 auto;
+    text-align: right;
+    text-transform: uppercase;
+    width: 940px;
+}
+#obt_ga_clear{
+	clear: both;
+}
+*/
+/*Ley de cookies*/
+/*Ley de cookies*/
+#cookie-law-info-bar {
+    font-size: 12px;
+    text-align: justify;
+    border: 0 none;
+    margin: 0 auto;
+    padding: 15px;
+    text-align: justify;
+    width: 100%;
+    z-index: 9999;
+    opacity: 0.85;
+}
+
+#cookie-law-info-bar span {
+    vertical-align: middle;
+    width:940px;
+    display:block;
+    margin:auto;
+}
+
+.cli-plugin-button, .cli-plugin-button:visited, .medium.cli-plugin-button, .medium.cli-plugin-button:visited {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1;
+    text-align: right;
+    text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25);
+    width: 920px;
+    text-transform:uppercase;
+    font-weight:bold;
+    background-image:none;
+    background-color:#000;
+}
+
+#cookie-law-info-bar .cli-plugin-main-link {
+    text-decoration:underline;
+}
+
+.cli-plugin-main-link:hover, .cli-plugin-main-link:focus, .cli-plugin-main-link:active {
+    text-decoration:underline;
+    font-weight:bold;
+}
+/*Fin Ley de cookies*/
+object{
+
+
+ z-index:-1;
+
+
+}
+
+a.enlacesinfondo:hover, a.enlacesinfondo:focus, a.enlacesinfondo:active {
+    text-decoration:underline;
+    font-weight:bold;
+}
+
+/**/
+#contenido ul {
+    padding-left:14px;
+}
+/**/
+/*OTRO Contenido de interes*/
+
+
+.bloque .fila ul.ul_forotro  {
+    width:940px;
+    display:inline;
+    font-size:13px;
+}
+
+
+.bloque .fila ul.ul_forotro li  {
+    width:208px;
+    font-family:Verdana;
+    display:inline-block;
+    padding-left:18px;
+}
+
+.bloque .fila ul.ul_forotro li .cintillo {
+    background:none;
+    width:208px;
+    height:auto;
+    left:0px;
+    margin-bottom:0px;
+    border-top: 1px dotted #c9c9c9;
+}
+
+.bloque .fila ul.ul_forotro li .cintillo p a.menuleft{
+    text-transform:none;
+    font-family:Verdana;
+    font-size:13px;
+}
+ul.ul_forotro li p.vermas {
+    border-bottom: 1px dotted #c9c9c9;   
+    color: #707070;
+    font-size: 13px;
+    line-height: 30px;
+}
+
+/*OTRO Contenido de interes*/
+
+
+.detalle .fltlft ol, .concurso ol
+{
+    font-size:14px;
+    padding-left:20px;
+}
+
+.detalle .fltlft ul, .concurso ul
+{
+    font-size:14px;
+    padding-left:20px;
+}
+
+/* Captcha */
+#recaptcha_table > tbody > tr:nth-child(1)
+{
+	height:9px;
+}
+
+#recaptcha_table > tbody > tr:nth-child(2)
+{
+	height:57px;
+}
+
+#recaptcha_table > tbody > tr:nth-child(3)
+{
+	height:5px;
+}
+
+#recaptcha_table > tbody > tr:nth-child(4)
+{
+	height:15px;
+}
+
+#recaptcha_table > tbody > tr:nth-child(5)
+{
+	height:17px;
+}
+
+#recaptcha_table > tbody > tr:nth-child(6)
+{
+	height:13px;
+}
+
+#recaptcha_table > tbody > tr:nth-child(7)
+{
+	height:5px;
+}
+
+#recaptcha_response_field
+{
+height:24px !important;
+}
+
+
+
+
+
+

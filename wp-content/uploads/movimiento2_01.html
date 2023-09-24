@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Mov. Rectilíneo Uniformemente Acelerado. Ejercicio 1 </title>
+<script type="text/javascript" src="../../wp-includes/js/jquery/jquery.js?ver=1.11.1"></script>
+<link rel="stylesheet" href="../../wp-content/themes/aula-en-red/style.css" type="text/css">
+<link rel="stylesheet" href="../../wp-content/uploads/jquery-ui.min_.css" type="text/css">
+<link rel="stylesheet" href="../../wp-content/uploads/jquery-ui.structure.min_.css" type="text/css">
+<link rel="stylesheet" href="../../wp-content/uploads/jquery-ui.theme_.min_.css" type="text/css">
+<link rel="stylesheet" href="../../wp-content/uploads/sims.css" type="text/css">
+<link rel='stylesheet' id='font-awesome-css'  href='../../wp-content/themes/aula-en-red/css/font-awesome.css?ver=3.9.1' type='text/css' media='all' />
+<!--[if IE 8]>
+<link rel='stylesheet' id='aulaenred-ie8-css'  href='../../wp-content/themes/aula-en-red/css/ie8.css?ver=20121010' type='text/css' media='all' />
+<![endif]-->
+<!--[if lt IE 8]>
+<link rel='stylesheet' id='aulaenred-ie7-css'  href='../../wp-content/themes/aula-en-red/css/ie7.css?ver=20121010' type='text/css' media='all' />
+<![endif]-->
+<script type='text/javascript' src='../../wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script> 
+<script src="../../wp-content/uploads/jquery-ui.min_.js" type="text/javascript"></script>
+<script src="../../wp-content/uploads/jcanvas.min_.js" type="text/javascript"></script>
+	
+    <script type="text/javascript">
+	var ejercicio = 1; //número de ejercicio (para resultado)
+	
+	var maxIntentos = 3; //número máximo de intentos
+	var numIntentos = 0; //intentos gastados
+	var estadoSim = 0; //-1: Mal, 0: sin terminar, 1: Bien, 2: Regular
+	var solucion = [false, true, false, false, true];
+
+	var anchoCanvas = 640;
+	var altoCanvas = 82;
+	
+	var posic = 0;
+	var tiempo = 0;
+	var velocidad = 0;
+	var velocidadIni = 0;
+	var aceleracion = 1;
+	var velocidadOld = tiempoOld = 0;
+	var posicCnv;
+
+	//gráfica
+	var minEscalaV = -10;
+	var maxEscalaV = 50;
+	var minEscalaH = 0;
+	var maxEscalaH = 15;
+	var numFranjasV = 6;
+	var anchoFranjaV = 150. / numFranjasV;
+	var anchoEscalaV = (maxEscalaV - minEscalaV)/ numFranjasV;
+	var numFranjasH = 5;
+	var anchoFranjaH = 150. / numFranjasH;
+	var anchoEscalaH = (maxEscalaH - minEscalaH)/ numFranjasH;
+	
+	function puntodec(num){
+		return (num.toString()).replace(".", ",");
+	}
+	
+	function comadec(text){
+		return parseFloat(text.replace(",", "."));
+	}
+
+	function chequear(){
+		//resultado
+		//respuesta del usuario y la correcta
+		var resp = jQuery('#cuestionario').find(':checkbox');// || [];
+		var bien = true;
+		jQuery.each(resp, function( index, value ) {
+			if(solucion[index] != value.checked) {
+				bien = false;
+				return false; //para salir de este bucle "each"
+			}
+		});
+		return bien;
+	}
+	
+	//bloque de JqueryUI ----------------------------------------------------
+	jQuery(function() {
+		//pestañas
+		jQuery( "#tabs" ).tabs({ heightStyle: "fill" });
+		jQuery( "#tabs" ).tabs( "option", "active", 1 ); //la pestaña que muestra inicialmente: 1 (intro)
+		jQuery( "#tabs" ).tabs( "option", "disabled", [0] ); //deshabilita la pestaña que uso para el nombre del ejercicio
+		jQuery( "#tab4").css("display", "none"); //oculto los textos de las soluciones
+		jQuery( "#tab4").css("visibility", "hidden");
+		
+		//tooltips
+		jQuery( document ).tooltip();
+
+		//botón Enviar
+		jQuery( "#btnEnviar, btnEnviar").button()
+			.click(function(event){
+				event.preventDefault();
+				parent.fsadf(ejercicio, numIntentos, estadoSim);
+				return 
+			});
+		
+		//cuestionario	
+		var checkboxOff = {primary: 'ui-icon-radio-off', secondary: null};
+		var checkboxOn = {primary: 'ui-icon-circle-check', secondary: null};
+		jQuery('#cuestionario input:checkbox').click(function(e) {
+			if (jQuery(e.target).button("option", "icons").primary == 'ui-icon-radio-off') {
+				jQuery(e.target).button("option", "icons", checkboxOn).button('refresh');
+			} else {
+				jQuery(e.target).button("option", "icons", checkboxOff).button('refresh');
+			}
+		});
+		jQuery('#cuestionario input:checkbox:checked').button({icons: checkboxOn});
+		jQuery('#cuestionario input:checkbox:not(:checked)').button({icons: checkboxOff});		
+		jQuery( "#cuestionario" ).buttonset();
+		
+		//botones simulación
+		jQuery( "#btnSim" ).buttonset();
+		jQuery( "#reset").button({
+			text: false,
+			icons: {primary: "ui-icon-arrowrefresh-1-w"}
+		});
+		jQuery( "#reset").click(function(e){
+			// habilita control velocidad y resetea animación
+			jQuery( "#aceleracionCtrl").slider('enable');
+			jQuery( "#velocidadIniCtrl").slider('enable');
+			runAnimation.value = false;
+			initSim();
+		});
+		jQuery( "#pause").button({
+			text: false,
+			icons: {primary: "ui-icon-pause"}
+		});
+		jQuery( "#pause").click(function(e){
+			runAnimation.value = false;
+		});
+		jQuery( "#play").button({
+			text: false,
+			icons: {primary: "ui-icon-play"}
+		});
+		jQuery( "#play").click(function(e){
+			if(runAnimation.value == false){
+				// deshabilita el control de la aceleración hasta que se resetee
+				jQuery( "#aceleracionCtrl").slider('disable');
+				jQuery( "#velocidadIniCtrl").slider('disable');
+				//inicia animación
+				runAnimation.value = !runAnimation.value;
+				var date = new Date();
+				var time = date.getTime();
+				animate(time, runAnimation);
+			}
+		});
+		
+		//función para cuando cambia el control de la aceleración
+		function cambioA (event, ui){
+			aceleracion = parseFloat(ui.value);
+			jQuery( "#aceleracionVal" ).html(aceleracion + " m/s<sup>2</sup>");
+			valoresNum();
+			valoresCnv();
+			//pintarFondoAni();  //V se cambia antes de poner en marcha, no durante el movimiento
+			//pintarMovil();
+		}
+		
+		//función para cuando cambia el control de la velocidad inicial
+		function cambioV (event, ui){
+			velocidadIni = parseFloat(ui.value);
+			velocidad = velocidadIni;
+			jQuery( "#velocidadIniVal" ).text(velocidadIni + " m/s");
+			valoresNum();
+			valoresCnv();
+		}
+
+		//control aceleración simulación
+		 jQuery( "#aceleracionCtrl" ).slider({
+			value:1,
+			min: 0,
+			max: 5,
+			step: 0.5,
+			slide: cambioA
+		});
+		jQuery( "#aceleracionVal" ).html("1 m/s<sup>2</sup>");
+		
+		//control velocidad inicial simulación
+		 jQuery( "#velocidadIniCtrl" ).slider({
+			value:0,
+			min: -5,
+			max: 10,
+			step: 1,
+			slide: cambioV
+		});
+		jQuery( "#velocidadIniVal" ).text("0 m/s");
+
+		//botón Responder
+		jQuery( "#btnComprob").button()
+			.click(function(event){
+				 event.preventDefault();
+				if (jQuery( "input:checked" ).length > 1){ //ha marcado alguna respuesta (1 input es de la aceleración)
+					if(chequear()){  //acierto
+						if(numIntentos==0){
+							//acertó a la primera
+							estadoSim = 1;
+							jQuery( "#tituloResultado" ).text("¡¡Enhorabuena, a la primera!!");
+						}
+						else{
+							//acertó tras algún intento
+							estadoSim = 2;
+							jQuery( "#tituloResultado" ).text("¡Respuesta correcta!");
+						}
+						//oculto las pestañas del ejercicio
+						jQuery( "#tab1").css("display", "none");
+						jQuery( "#tab1").css("visibility", "hidden");
+						jQuery( "#tab2").css("display", "none");
+						jQuery( "#tab2").css("visibility", "hidden");
+						jQuery( "#tab3").css("display", "none");
+						jQuery( "#tab3").css("visibility", "hidden");
+						//muestro la pestaña con la solución
+						jQuery( "#tab4").css("display", "inline");
+						jQuery( "#tab4").css("visibility", "visible");
+						jQuery( "#tabs" ).tabs( "option", "active", 4 );
+
+					}
+					else{ //fallo
+						numIntentos++;
+						var quedan = maxIntentos - numIntentos;
+						if(quedan != 1)
+							jQuery( "#quedanIntentos" ).text( (maxIntentos - numIntentos) + " intentos");
+						else
+							jQuery( "#quedanIntentos" ).text( (maxIntentos - numIntentos) + " intento");
+						if(numIntentos < maxIntentos){ //error, pero quedan intentos
+							jQuery( "#dialogoRevisar" ).dialog( "open" );	
+						}
+						else{ //no quedan intentos
+							estadoSim = -1;
+							jQuery( "#tituloResultado" ).text("¡Has agotado todos los intentos!");
+							//oculto las pestañas del ejercicio
+							jQuery( "#tab1").css("display", "none");
+							jQuery( "#tab1").css("visibility", "hidden");
+							jQuery( "#tab2").css("display", "none");
+							jQuery( "#tab2").css("visibility", "hidden");
+							jQuery( "#tab3").css("display", "none");
+							jQuery( "#tab3").css("visibility", "hidden");
+							//muestro la pestaña con la solución
+							jQuery( "#tab4").css("display", "inline");
+							jQuery( "#tab4").css("visibility", "visible");
+							jQuery( "#tabs" ).tabs( "option", "active", 4 );
+						}
+					}
+				}
+				else{ //no ha marcado ninguna respuesta
+					jQuery( "#dialogoMarcar" ).dialog( "open" );	
+				}
+				 return 
+			});
+
+		//diálogo intento fallido
+		jQuery( "#dialogoRevisar" ).dialog({
+			modal: true,
+			autoOpen: false,
+			width: 440,
+			position: {my: "center", at: "center", of: "#tabs" },
+			buttons: {
+				Aceptar: function() {
+					jQuery( this ).dialog( "close" );
+				}
+			}
+		});
+
+		//diálogo respuesta sin marcar
+		jQuery( "#dialogoMarcar" ).dialog({
+			modal: true,
+			autoOpen: false,
+			width: 360,
+			position: {my: "center", at: "center", of: "#tabs" },
+			buttons: {
+				Aceptar: function() {
+					jQuery( this ).dialog( "close" );
+				}
+			}
+		});
+
+		//después de cargar todo jquery, muestra el contenido de la web
+		//jQuery("#tabs").show();
+		jQuery("#todo").css("visibility", "visible");
+		jQuery("#todo").css("display", "inline");
+    });
+
+
+	//precarga
+	jQuery( document ).ready(function() {
+		initSim();
+		pintarFondoAni();
+		pintarMovil();
+	});
+	
+	
+	//animación ----------------------------------
+	window.requestAnimFrame = (function(callback) {
+		return window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame ||
+		function(callback) {
+		  window.setTimeout(callback, 1000 / 15 /2);  //15 fps
+		};
+	})();
+	
+	//valores y aspecto inicial de la simulación
+	function initSim(){
+		posic = 0;
+		tiempo = 0;
+		velocidad = velocidadIni;
+		tiempoOld = velocidadOld = 0;
+		//velocidad = 0;
+		
+		//el control de la aceleración y de la velocidad inicial
+		jQuery( "#aceleracionVal" ).val(aceleracion);
+		jQuery( "#aceleracionCtrl").slider( "value", aceleracion );
+		jQuery( "#velocidadIniVal" ).val(velocidadIni);
+		jQuery( "#velocidadIniCtrl").slider( "value", velocidadIni );
+
+		//actualiza los valores numéricos
+		valoresNum();
+		
+		//valores factorizados y desplazados para pintar en el canvas
+		valoresCnv();
+		
+		pintarFondoAni();
+		pintarMovil();
+		
+		//resetea la gráfica
+		initGrf();
+	}
+	
+	//reinicia el canvas de la gráfica
+	function initGrf(){
+		jQuery('#canvasGrf').clearCanvas();
+		//eje x
+		jQuery('#canvasGrf').drawText({
+			fillStyle: '#000',
+			x: 54+75, y: 20+190,
+			fontSize: 13,
+			fontFamily: 'Verdana, sans-serif',
+			//fontStyle: 'italic bold',
+			text: 'Tiempo (s)'
+		});		
+		var factor = 1;   //ancho de cada marca en la variable medida
+		
+		//magnitud eje y
+		jQuery('#canvasGrf').drawText({
+			fillStyle: '#000',
+			x: 54-45, y: 20+75,
+			fontSize: 13,
+			fontFamily: 'Verdana, sans-serif',
+			//fontStyle: 'italic bold',
+			text: 'Velocidad (m/s)',
+			rotate: -90
+		});	
+		
+		//marco
+		jQuery('#canvasGrf').drawRect({
+			fillStyle: '#ffffff',
+			strokeStyle: '#000',
+			strokeWidth: 1,
+			x: 54+75, y: 20+75,
+			width: 150,
+			height: 150,
+		});
+		
+		//líneas horizontales y escala vertical
+		for(var i=0; i<=numFranjasV; i++){ 
+			//númeroescala
+			jQuery('#canvasGrf').drawText({
+				fillStyle: '#000',
+				x: 54 -20, y: 20+anchoFranjaV * i, 
+				fontSize: 13,
+				fontFamily: 'Verdana, sans-serif',
+				//fontStyle: 'italic bold',
+				text: maxEscalaV - anchoEscalaV * i ,
+				//rotate: -90
+			});		
+			if(i==0 || i==numFranjasV) continue; //líneas ya pintadas con el marco
+			//línea
+			jQuery('#canvasGrf').drawLine({
+				strokeStyle: '#aaaaaa',
+				strokeWidth: 1,
+				x1: 54,        y1: 20+anchoFranjaV * i,
+				x2: 54+150, y2: 20+anchoFranjaV * i,
+			});
+		}
+		
+		//líneas verticales y escala horizontal
+		for(var i=0; i<=numFranjasH; i++){
+			jQuery('#canvasGrf').drawText({
+				fillStyle: '#000',
+				x: 54 + i * anchoFranjaH, y: 20+170,
+				fontSize: 13,
+				fontFamily: 'Verdana, sans-serif',
+				//fontStyle: 'italic bold',
+				text: minEscalaH + anchoEscalaH * i
+			});		
+			if(i==0 || i==numFranjasH) continue;
+			jQuery('#canvasGrf').drawLine({
+				strokeStyle: '#aaaaaa',
+				strokeWidth: 1,
+				x1: 54+anchoFranjaH * i,  y1: 20,
+				x2: 54+anchoFranjaH * i,  y2: 20+150,
+			});
+		}
+	}
+	
+	//pintado de los puntos de la gráfica
+	function pintarGraf(xOld, yOld, x, y, color){
+		if(x>=minEscalaH && x<=maxEscalaH && y>=minEscalaV && y<=maxEscalaV){
+			jQuery('#canvasGrf').drawLine({
+			  strokeStyle: color,
+			  strokeWidth: 1.5,
+			  x1: 54 + 150*(xOld-minEscalaH)/(maxEscalaH-minEscalaH), 
+			  y1: 20 + 150*(maxEscalaV-yOld)/(maxEscalaV-minEscalaV),
+			  x2: 54 + 150*(x-minEscalaH)/(maxEscalaH-minEscalaH), 
+			  y2: 20 + 150*(maxEscalaV-y)/(maxEscalaV-minEscalaV),
+			});
+		}
+		else {//se sale de gráfica
+			if(xOld<maxEscalaH && yOld<maxEscalaV && yOld>minEscalaV){ //último trazo que se pintará
+				if(x>=maxEscalaH){
+					y = (y-yOld)/(x-xOld)*(maxEscalaH-xOld) + yOld;
+					x = maxEscalaH;
+				}
+				if(y>=maxEscalaV){ //se sale en vertical
+					x = (maxEscalaV-yOld)/(y-yOld)*(x-xOld) + xOld;
+					y = maxEscalaV;
+				}
+				if(y<=minEscalaV){ //se sale por debajo
+					x = (minEscalaV-yOld)/(y-yOld)*(x-xOld) + xOld;
+					y = minEscalaV;
+				}
+				jQuery('#canvasGrf').drawLine({
+				  strokeStyle: color,
+				  strokeWidth: 1.5,
+				  x1: 54 + 150*(xOld-minEscalaH)/(maxEscalaH-minEscalaH), 
+				  y1: 20 + 150*(maxEscalaV-yOld)/(maxEscalaV-minEscalaV),
+				  x2: 54 + 150*(x-minEscalaH)/(maxEscalaH-minEscalaH), 
+				  y2: 20 + 150*(maxEscalaV-y)/(maxEscalaV-minEscalaV),
+				});		
+			}
+		}
+	}
+	
+	//actualiza los valores numéricos de la simulación
+	function valoresNum(){
+		jQuery( "#posicVal" ).text( puntodec(posic.toFixed(2)) );
+		jQuery( "#velocVal" ).text( puntodec(velocidad.toFixed(2)) );
+		jQuery( "#tiempoVal" ).text( puntodec(tiempo.toFixed(2)) );
+	}
+	
+	//actualiza los valores del canvas a partir de los de la simulación
+	function valoresCnv(){
+		//escala coche: 1 metro = 19 píxeles
+		posicCnv = 50+posic*19;  //posición móvil	
+	}
+
+	
+	function pintarMovil(){
+		jQuery("#canvasAni").drawImage({
+				source: 'movimiento1_1_2.png',
+				x: posicCnv, y: altoCanvas/2,
+			});
+	}
+	
+    function pintarFondoAni() {
+        jQuery("#canvasAni").drawRect({  //suelo
+			fillStyle: '#999999',
+			x: anchoCanvas/2, y:altoCanvas/2,
+			width: anchoCanvas, height: altoCanvas
+		});
+		//líneas calzada
+		for(var i=0; i<4; i++){
+			jQuery("#canvasAni").drawRect({  //suelo
+				fillStyle: '#ffffff',
+				x: 50+i*3*60, y:6,
+				width: 60, height: 4
+			});
+			jQuery("#canvasAni").drawRect({  //suelo
+				fillStyle: '#ffffff',
+				x: 50+i*3*60, y:altoCanvas-6,
+				width: 60, height: 4
+			});
+		}
+			
+    }
+	
+	function animate(lastTime, runAnimation) {
+		if(runAnimation.value) {
+			// update
+			var time = (new Date()).getTime();
+			var deltaT = (time - lastTime)/1000;
+
+			tiempoOld = tiempo;
+			tiempo += deltaT;
+			velocidadOld = velocidad;
+			posic = (velocidadIni + 0.5 * aceleracion * tiempo) * tiempo;
+			velocidad = velocidadIni + aceleracion * tiempo;
+			
+			//valores numéricos
+			valoresNum();
+
+			//valores usados por el canvas
+			valoresCnv();
+			
+			// draw
+			jQuery('#canvasAni').clearCanvas();
+			pintarFondoAni();
+			pintarMovil();
+			pintarGraf(tiempoOld, velocidadOld, tiempo, velocidad, '#FF0000');
+
+			requestAnimFrame(function() {
+				animate(time, runAnimation);
+			});
+		}
+	}
+	
+	//variable para parar/empezar
+    var runAnimation = {
+        value: false
+    };
+	
+	
+    </script>
+  </head>
+  <body>
+	<div id="todo" style="visibility: hidden">
+    <div id="tabs" style="width:702px;height:402px;">
+      <ul>
+        <li>
+          <a id="tab0" href="#tab-0" class="app-solapa">Mov. Rectilíneo Uniformemente Acelerado. Ejercicio 1</a>
+        </li>
+        <li>
+          <a id="tab1" href="#tab-1" class="app-solapa">Introducción</a>
+        </li>
+        <li>
+          <a id="tab2" href="#tab-2" class="app-solapa">Simulación</a>
+        </li>
+        <li>
+          <a id="tab3" href="#tab-3" class="app-solapa">Test</a>
+        </li>
+        <li>
+          <a id="tab4" href="#tab-4" class="app-solapa">Solución</a>
+        </li>
+      </ul>
+	  <div id="tab-0">
+		<p>Error. No debería verse este texto.</p>
+	  </div>
+      <div id="tab-1" class="app-content">
+		<div class=imgDch style="margin-top:10px;margin-right:-2px;">
+			<img style="width:250px; height:300px;" src="movimiento2_1_1.jpg">
+		</div>
+        <p style="margin-top:6px">
+			En el <strong>Movimiento Rectilíneo Uniformemente acelerado</strong> la aceleración es constante a lo largo de todo el movimiento. La <strong>aceleración</strong> es un indicador de cómo cambia la velocidad a lo largo del tiempo.
+			<br><br>
+			En la pestaña <strong>Simulación</strong> encontrarás un coche en el que puedes modificar su velocidad inicial y su aceleración. Pon en marcha la simulación con diferentes valores para comprobar cómo afectan al movimiento del coche y a la <strong>gráfica v-t</strong> en la que está representada la velocidad del coche frente al tiempo. Los parámetros sólo se pueden cambiar antes de poner en marcha la simulación.
+			<br><br>
+			Con la ayuda de la simulación comprueba qué frases son verdaderas en el apartado <strong>Test</strong>.
+		</p>
+      </div>
+	  <div id="tab-2" class="app-content">
+		<canvas style="margin-left:auto; margin-right:auto; margin-top: 10px; display: block;" id="canvasAni" width="640" height="82">
+			Su navegador no soporta Canvas. Pruebe a actualizarlo o use Chrome, Firefox...
+		</canvas>
+		<canvas style="float: left; margin-left:10px; margin-top:20px" id="canvasGrf" width="220" height="220">
+			Su navegador no soporta Canvas. Pruebe a actualizarlo o use Chrome, Firefox...
+		</canvas>
+        <div id="panel" style="width:360px; margin-right:5px;margin-top:20px;">
+			<form>
+				<div id="btnSim" style="text-align:center">
+					<input type="radio" id="reset" name="radio">
+						<label for="reset" title="La simulación vuelve a su estado inicial."></label>
+					<input type="radio" id="pause" name="radio" checked="checked">
+						<label for="pause" title="Deja la simulación en pausa."></label>
+					<input type="radio" id="play" name="radio">
+						<label for="play" title="Pone en marcha la simulación."></label>
+				</div>
+			</form>
+			<div style="text-align:center;margin-top:10px;">
+				<div style="float:left;">Aceleración: </div>
+				<div style="float:left; margin-top:6px; margin-left:15px;" class="ctrlSlider" id="aceleracionCtrl" title="Cambia su valor antes de poner en marcha"></div>
+				<div style="float:left;">&nbsp;&nbsp;</div>
+				<span style="float:left;" id="aceleracionVal">1 m/s<sup>2</sup></span>
+			</div>
+			<div style="text-align:center;clear:both;">
+				<div style="float:left;">Veloc. inicial: </div>
+				<div style="float:left; margin-top:6px; margin-left:15px;" class="ctrlSlider" id="velocidadIniCtrl" title="Cambia su 
+				valor antes de poner en marcha"></div>
+				<div style="float:left;">&nbsp;&nbsp;</div>
+				<span style="float:left;" id="velocidadIniVal">0 m/s</span><br>
+			</div>
+			<div style="text-align:center; margin-top:20px;">
+				Espacio: <span id="posicVal" class="valornum">0</span> metros</p>
+				<span style="position:relative; left:-18px;">Velocidad: <span id="velocVal" class="valornum">0</span> m/s</span></p>
+				<span style="position:relative; left:9px;">Tiempo: <span id="tiempoVal" class="valornum">0</span> segundos</span>
+			</div>
+		</div>
+	  </div>
+      <div id="tab-3" class="app-content">
+		<div id="cuestionario" style="position:relative;">
+			<p style="margin-top: 10px;">
+			  Marca todas las expresiones que sean correctas según la simulación. Después pulsa el botón <strong>Comprobar</strong>
+			  para ver si tu selección es correcta. Te quedan <span id="quedanIntentos">3 intentos</span>.
+			</p>
+			<input type="checkbox" id="resp1" /><label id="label1" for="resp1" style="width: 580px;">La velocidad mantiene el signo que tiene justo al principio</label></br>
+			<input type="checkbox" id="resp3" /><label id="label3" for="resp3" style="width: 580px;">A mayor aceleración más empinada es la gráfica v-t</label></br>
+			<input type="checkbox" id="resp4" /><label id="label4" for="resp4" style="width: 580px;">Cuando la aceleración es grande, la gráfica no es recta sino curva</label></br>
+			<input type="checkbox" id="resp5" /><label id="label5" for="resp5" style="width: 580px;">A menor velocidad inicial, menos empinada es la gráfica v-t</label></br>
+			<input type="checkbox" id="resp2" /><label id="label2" for="resp2" style="width: 580px;">Si no hay aceleración, la velocidad permanece constante</label></br>
+		</div>
+		<div style="margin-top:-10px;" id="btnComprob" >
+			<a href="#">Comprobar</a>
+		</div>
+      </div>
+	  <div id="tab-4" class="app-content">
+		<p><strong><span id="tituloResultado">Título resultado</span></strong></p>
+		<p>
+		<br>
+		En un movimiento rectilíneo uniformemente Acelerado <strong>la velocidad cambia</strong> a lo largo del tiempo. En la simulación la aceleración siempre era positiva, por lo que al cabo del tiempo la velocidad también era positiva aunque inicialmente fuera negativa.
+		<br><br>
+		En la gráfica v-t se veía que a mayor aceleración mayor era el cambio en la velocidad y por tanto más empinada era la gráfica v-t. Dicha gráfica es siempre una recta porque la velocidad es <strong>directamente proporcional</strong> a la aceleración. La velocidad inicial no influye en la inclinación de la gráfica v-t, sólo en su posición vertical.
+		<br><br>
+		Cuando la aceleración es nula, no hay cambios en la velocidad, por lo que permanece constante y se trataría de un movimiento rectilíneo uniforme.
+		</p>
+		<div id="btnEnviar" style="display: inline-block; margin-top:-25px; margin-left:270px;">
+			<a href="#">Enviar</a>
+		</div>
+		</p>
+	  </div>
+    </div>
+	<div id="dialogoMarcar" title="¡Cuidado!">
+		<p>
+		<span class="ui-icon ui-icon-alert" style="float:left; margin:0 7px 20px 0;"></span>
+		No has marcado ninguna de las opciones. Puedes marcar varias a la vez.
+		</p>
+	</div>
+	<div id="dialogoRevisar" title="¡Respuesta incorrecta!">
+		<p>
+		<span class="ui-icon ui-icon-alert" style="float:left; margin:0 7px 20px 0;"></span>
+		Has gastado un intento porque has marcado alguna opción incorrecta y/o has olvidado marcar alguna de las correctas.
+		Sustituye los valores de la simulación en cada fórmula para comprobar si es correcta.
+		</p>
+	</div>
+  </body>
+</html>

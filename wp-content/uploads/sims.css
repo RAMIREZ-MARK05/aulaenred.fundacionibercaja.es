@@ -1,0 +1,196 @@
+/* propiedades del texto por defecto */
+p{
+	font-size: 14px;
+	/*text-align: justify;*/
+	line-height:20px;
+	font-family:"Verdana";
+}
+
+/* texto normal en app. did�cticas */
+.app-content {
+	font-size: 14px;
+	line-height:20px;
+	font-family:"Verdana";
+	/*text-align:justify;*/
+	/*margin-right:10px;*/
+	/*margin-top:10px;*/
+}
+.app-content li {
+	position: relative;
+	left: 30px;
+	list-style: square;
+	color: #000000;
+}
+
+.app-content ul{
+	position: relative;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+/* la casilla de respuesta es m�s alta que el texto y se muestra centrada */
+.app-casilla{
+	text-align:center;
+	margin-top: 5px;
+}
+ 
+.app-solapa{
+	font-size:13px; 
+	font-family:IbercajaBold; 
+}
+
+.imgIzq{
+	float: left;
+	margin-right:20px;
+}
+.imgDch{
+	float: right;
+	margin-left:20px;
+}
+/* tama�o general de la letra en los elementos JQueryUI*/
+.ui-widget {  
+	font-size: 13px;
+}
+
+/*altura de las pesta�as*/
+#tabs .ui-helper-reset {
+	line-height: 0.3;  
+}
+/* apariencia de la pesta�a con el t�tulo del ejercicio */
+#tabs .ui-state-disabled{
+	border-width: 0;
+	background: none;
+	opacity: 1;
+	filter:Alpha(Opacity=100);
+}
+#tabs .ui-state-disabled a{
+	color: #333333;
+	font-weight: bold;
+}
+
+/* formato del cuestionario */
+#cuestionario .ui-button{  
+	width: 620px;
+	text-align: left;
+	border-radius: 3px;  /* por defecto saldr�an horizontales y los intermedios esquinados */
+	margin-left: 40px;
+	margin-top: 10px;
+}
+/* color de las respuestas marcadas */
+#cuestionario .ui-state-default{  /* sin marcar */
+	background: #eeeeee;  
+	color: #0062AE;
+}
+#cuestionario .ui-state-active{ 
+	background: #4891DC;  
+	color: #ffffff;
+}
+#btnComprob{
+	/*position:absolute;*/
+	bottom:-3em;
+	/*right:3em; */
+	width: 130px;
+	margin-right: auto;
+	margin-left: auto;
+	display: block;	
+}
+#btnSiguiente{
+	width: 130px;
+	float: right;
+	margin-top: 20px;
+}
+#btnAnterior{
+	width: 130px;
+	float: left;
+	margin-top: 20px;
+}
+#btnEnviar{
+	bottom:-3em;
+	width: 130px;
+	margin-right: auto;
+	margin-left: auto;
+	display: block;	
+}
+
+
+/* tooltips */
+label { 
+	display: inline-block;
+	width: 5em;
+}
+
+/* panel de la simulaci�n */
+#panel{
+	float: right;
+	/*text-align:justify;*/
+	width: 250px;
+	font-size: 14px;
+	margin-right: 48px; /*13+35*/
+	margin-top: 35px;
+	border: 2px solid gray;
+	padding: 18px;
+}
+
+/* control de slider de la sim */
+.ctrlSlider{
+	width: 180px;
+	margin-top: 8px;
+	margin-bottom: 16px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.ctrlSlider .ui-slider{
+	text-align: right;
+}
+
+/* botones reproducci�n simulaci�n */
+#btnSim label{
+	width: 30px;
+	height: 30px;
+}
+
+/* valores num�ricos de la sim*/
+.valornum{
+	display:inline-block;
+	width:50px;
+	padding: 1px 5px 1px;
+	border:1px solid gray;
+}
+
+
+.app-tabla table, td, th{
+	border:1pt solid #000;  /* 01589f (azul), 9f5801 (dorado), 5f2201 (rojo oscuro) */
+	font-size: 13px;
+}
+.app-tabla table{
+	margin-top: 10px;
+	border-collapse: collapse;
+}
+.app-tabla td{
+	padding:0px 0px 0px 5px;
+}
+.app-tabla td.col-0{
+	background-color:#eeeeee;
+	font-size: 14px;
+	vertical-align:middle;
+}
+.app-tabla td.col-1{
+	/*background-color:#ffffff;*/
+}
+.app-tabla td.col-2{
+	background-color:#eeeeee;
+}
+.app-tabla th{
+	background-color:#0062ae;
+	color:white;
+	text-align: center;
+	font-size: 14px;
+	padding: 3px;
+}
+.app-tabla th.esquina{
+	background-color:#ffffff;
+	border-bottom-style:hidden;
+	border-right-style:hidden;
+	border-left-style:hidden;
+	border-top-style:hidden;
+}
